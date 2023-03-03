@@ -267,96 +267,44 @@ scientific knowledge in machine learning models, notably by specifying
 the assumptions made about the world through symmetries, invariances,
 and physical laws (see Figure 1).
 
-\textbf{Box 3: Talks given during this workshop session}
+\subsection{Talks given during this workshop session}
 
-\emph{\textbf{Bernhard Schölkopf: Causality, causal digital twins, and
-their applications}}
+\abstracttitle{Causality, causal digital twins, and their applications}
+\abstractauthor[Bernhard Sch\"olkopf]{Bernhard Sch\"olkopf (MPI für Intelligente Systeme - Tübingen, DE)}
+\license
 
-1.Desiderata for causal machine learning: work with (and benefit from)
-non-IID data, multi-task/multi-environment, sample-efficient, OOD,
-generalisation from observation of marginals, interventional.
+\begin{enumerate}
+\item Desiderata for causal machine learning: work with (and benefit from) non-IID data, multi-task/multi-environment, sample-efficient, OOD, generalisation from observation of marginals, interventional.
+ \item Modelling taxonomy: differential equations, causal models, statistical models.
+ \item How to get from one level to the next.
+\item How to transfer between statistical models that share the same underlying causal model. 
+\item The assumption of independent causal mechanisms (ICM) (for example, invariance/autonomy) and sparse mechanism design. 
+ \item How to derive the arrow of time from ICM and algorithmic information theory.
+ \item Statistical formulation of ICM: causal de Finetti.
+ \item Application to exoplanet discovery and Covid-19 vaccine scenarios.
+ \item Causal representations as (a) causal digital twins and (b) AI models.
+\end{enumerate}
 
-2.Modelling taxonomy: differential equations, causal models, statistical
-models.
+\abstracttitle{Invariance: From Causality to Distribution Generalization}
+\abstractauthor[Jonas Peters]{Jonas Peters (University of Copenhagen, DK)}
+\license
 
-3.How to get from one level to the next.
+Assume that we observe data from a response $Y$ and a set of covariates $X$ under different experimental conditions (or environments). Rather than focusing on the model that is most predictive, it has been suggested to take into account the invariance of a model. This can help us to infer causal structure (Which covariates are causes of $Y$?) and find models that generalize better (How well does the model perform on an unseen environment?). We show a few applications of these general principles and discuss first steps towards understanding the corresponding theoretical guarantees and limits.
 
-4.How to transfer between statistical models that share the same
-underlying causal model.~
+\abstracttitle{Can we discover dynamical laws from observation?}
+\abstractauthor[Niki Kilbertus]{Niki Kilbertus (TU München, DE \& Helmholtz AI München, DE)}
+\license
 
-5.The assumption of independent causal mechanisms (ICM) (for example,
-invariance/autonomy) and sparse mechanism design.~
+I will start with a brief introduction to identifiability of ODE systems from a unique continuous or discrete observed solution trajectory. Then, I will provide an overview of modern approaches to inferring dynamical laws (in the form of ODEs) from observational data with a particular focus on interpretability and symbolic methods. Finally, I will describe our recent attempts and results at inferring scalar ODEs in symbolic form from a single irregularly sampled, noisy solution trajectory.
 
-6.How to derive the arrow of time from ICM and algorithmic information
-theory.
+\abstracttitle{Invariances and equivariances in machine learning}
+\abstractauthor[Soledad Villar]{Soledad Villar (Johns Hopkins University - Baltimore, US)}
+\license
 
-7.Statistical formulation of ICM: causal de Finetti.
+In this talk, we give an overview of the progress in the last few years by several research groups in designing machine learning methods that repeat physical laws. Some of these frameworks make use of irreducible representations, some make use of high-order tensor objects, and some apply symmetry enforcing constraints. Our work shows that it is simple to parameterise universally approximating functions that are equivariant under actions of the Euclidean, Lorentz, and Poincare group at any dimensionality. The key observation is that $O(d)$-equivariant (and related group-equivariant) functions can be universally expressed in terms of a lightweight collection of dimensionless scalars (scalar products and scalar contractions of the scarla, vector, and tensor inputs). We complement our theory with numerical examples that show that the scalar-based method is simple and efficient, and mention ongoing work on cosmology simulations.
 
-8.Application to exoplanet discovery and Covid-19 vaccine scenarios.
+\abstracttitle{Divide-and-Conquer Equation Learning with R2 and Bayesian Model Evidence}
+\abstractauthor[Bubacarr Bah]{Bubacarr Bah (AIMS South Africa - Cape Town, ZA)}
+\license
 
-9.Causal representations as (a) causal digital twins and (b) AI models.
-
-\emph{\textbf{Jonas Peters: Invariance: From Causality to Distribution
-Generalization}}
-
-Assume that we observe data from a response Y and a set of covariates X
-under different experimental conditions (or environments). Rather than
-focusing on the model that is most predictive, it has been suggested to
-take into account the invariance of a model. This can help us to infer
-causal structure (Which covariates are causes of Y?) and find models
-that generalize better (How well does the model perform on an unseen
-environment?). We show a few applications of these general principles
-and discuss first steps towards understanding the corresponding
-theoretical guarantees and limits.
-
-\emph{\textbf{Niki Kilbertus: Can we discover dynamical laws from
-observation?~}}
-
-I will start with a brief introduction to identifiability of ODE systems
-from a unique continuous or discrete observed solution trajectory. Then,
-I will provide an overview of modern approaches to inferring dynamical
-laws (in the form of ODEs) from observational data with a particular
-focus on interpretability and symbolic methods. Finally, I will describe
-our recent attempts and results at inferring scalar ODEs in symbolic
-form from a single irregularly sampled, noisy solution trajectory.
-
-\emph{\textbf{Soledad Villar: Invariances and equivariances in machine
-learning}}
-
-In this talk, we give an overview of the progress in the last few years
-by several research groups in designing machine learning methods that
-repeat physical laws. Some of these frameworks make use of irreducible
-representations, some make use of high-order tensor objects, and some
-apply symmetry enforcing constraints. Our work shows that it is simple
-to parameterise universally approximating functions that are equivariant
-under actions of the Euclidean, Lorentz, and Poincare group at any
-dimensionality. The key observation is that O(d)-equivariant (and
-related group-equivariant) functions can be universally expressed in
-terms of a lightweight collection of dimensionless scalars (scalar
-products and scalar contractions of the scalar, vector, and tensor
-inputs). We complement our theory with numerical examples that show that
-the scalar-based method is simple and efficient, and mention ongoing
-work on cosmology simulations.~
-
-\emph{\textbf{Bubacarr Bah: Divide-and-Conquer Equation Learning with R2
-and Bayesian Model Evidence}}
-
-Deep learning is a powerful method for tasks like predictions and
-classification, but lacks interpretability and analytic access. Instead
-of fitting up to millions of parameters, an intriguing alternative for a
-wide range of problems would be to learn the governing equations from
-data. Resulting models would be concise, parameters can be interpreted,
-the model can adjust to shifts in data, and analytic analysis allows for
-extra insights. Common challenges are model complexity identification,
-stable feature selection, expressivity, computational feasibility, and
-scarce data. In our work, the mentioned challenges are addressed by
-combining existing methods in a novel way. We choose multiple regression
-as a framework and argue how a surprisingly large space of model
-equations can be captured. For feature selection, we exploit the
-computationally cheap coefficient of determination
-(R\textsuperscript{2}) to loop through millions of models, and by using
-a divide-and-conquer strategy, we are able to rule out remaining models
-in the equation class. Final model selection is achieved by exact values
-of the Bayesian model evidence with empirical priors, which is known to
-identify suitable model complexity without relying on mass data. Random
-polynomials, and a couple of chaotic systems are used as examples.
+Deep learning is a powerful method for tasks like predictions and classification, but lacks interpretability and analytic access. Instead of fitting up to millions of parameters, an intriguing alternative for a wide range of problems would be to learn the governing equations from data. Resulting models would be concise, parameters can be interpreted, the model can adjust to shifts in data, and analytic analysis allows for extra insights. Common challenges are model complexity identification, stable feature selection, expressivity, computational feasibility, and scarce data. In our work, the mentioned challenges are addressed by combining existing methods in a novel way. We choose multiple regression as a framework and argue how a surprisingly large space of model equations can be captured. For feature selection, we exploit the computationally cheap coefficient of determination (R2) to loop through millions of models, and by using a divide-and-conquer strategy, we are able to rule out remaining models in the equation class. Final model selection is achieved by exact values of the Bayesian model evidence with empirical priors, which is known to identify suitable model complexity without relying on mass data. Random polynomials, and a couple of chaotic systems are used as examples.
