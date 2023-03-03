@@ -272,7 +272,7 @@ the impact of climate change and efforts to mitigate it.\footnote{For
   example: European Commission (2022) Destination Earth -- new digital
   twin of the Earth will help tackle climate change and protect nature,
   available at:
-  https://ec.europa.eu/commission/presscorner/detail/en/IP\_22\_1977}
+  \href{https://ec.europa.eu/commission/presscorner/detail/en/IP\_22\_1977}}
 The challenge is to integrate different models or components of a system
 -- for example, connecting atmospheric models, with land models, with
 models of human behaviour -- in a way that represents the complete Earth
@@ -289,72 +289,34 @@ questions that emerge from such ambitions is: what level of granularity
 is helpful or necessary to deliver effective results? And what
 interfaces between diverse models might be possible?
 
-\textbf{Box 2: Talks given during this workshop session}
+\subsection{Talks given during this workshop session}
 
-\emph{\textbf{Philipp Hennig: Information from data and compute in
-scientific inference}}
+\abstracttitle{Information from data and compute in scientific inference}
+\abstractauthor[Philipp Hennig]{Philipp Hennig (Universität Tübingen, DE)}
+\license
 
-Simulations are central to scientific inference. Simulators are
-typically treated as black boxes, with the inference loop wrapped around
-them. This approach is convenient for the programming scientists, but
-can be highly inefficient. Probabilistic numerical methods represent
-computational and empirical data in the same language, which allows for
-inference from mechanistic knowledge and empirical data in one combined
-step. I will argue that scientific computing needs to embrace such new
-computational paradigms to truly leverage ML in science, which also
-requires rethinking scientific codebases.
+Simulations are central to scientific inference. Simulators are typically treated as black boxes, with the inference loop wrapped around them. This approach is convenient for the programming scientists, but can be highly inefficient. Probabilistic numerical methods represent computational and empirical data in the same language, which allows for inference from mechanistic knowledge and empirical data in one combined step. I will argue that scientific computing needs to embrace such new computational paradigms to truly leverage ML in science, which also requires rethinking scientific codebases.
 
-\emph{\textbf{Hans Kersting: ODE filters and smoothers: probabilistic
-numerics for mechanistic modelling}}
+\abstracttitle{ODE filters and smoothers: probabilistic numerics for mechanistic modelling}
+\abstractauthor[Hans Kersting]{Hans Kersting (INRIA - Paris, FR)}
+\license
 
-Probabilistic numerics (PN) unifies statistical and numerical
-approximations by formulating them in the same language of statistical
-(Bayesian) inference. For ODEs, a well-established probabilistic
-numerical method is ODE filters and smoothers which can help to deal
-more aptly with uncertainty in mechanistic modeling. In the first half
-of this talk, we will first introduce PN and then present ODE
-filters/smoothers as a specific instance of PN. In the second half, we
-will discuss how ODE filters/smoothers can improve mechanistic modeling
-in the natural sciences and present a recent application of inferring
-the parameters of real-word dynamical system.
+Probabilistic numerics (PN) unifies statistical and numerical approximations by formulating them in the same language of statistical (Bayesian) inference. For ODEs, a well-established probabilistic numerical method is ODE filters and smoothers which can help to deal more aptly with uncertainty in mechanistic modeling. In the first half of this talk, we will first introduce PN and then present ODE filters/smoothers as a specific instance of PN. In the second half, we will discuss how ODE filters/smoothers can improve mechanistic modeling in the natural sciences and present a recent application of inferring the parameters of real-word dynamical system.
 
-\emph{\textbf{Jakob Macke: Four short stories on simulation-based
-inference}}
+\abstracttitle{Four short stories on simulation-based inference}
+\abstractauthor[Jakob Macke]{Jakob Macke (Universität Tübingen, DE)}
+\license
 
-Many fields of science make extensive use of simulations expressing
-mechanistic forward models, requiring the use of simulation-based
-inference methods. I will share experiences and lessons learned from
-four applications: Describing the dynamics and energy consumptions of
-neural networks in the stomatogastric ganglion; inferring parameters of
-gravitational wave models; optimising single-molecule localisation
-microscopy, and building computational models of the fly visual system.
-I will try to convey some thoughts on the challenges and shortcomings of
-current approaches.~
+Many fields of science make extensive use of simulations expressing mechanistic forward models, requiring the use of simulation-based inference methods. I will share experiences and lessons learned from four applications: Describing the dynamics and energy consumptions of neural networks in the stomatogastric ganglion; inferring parameters of gravitational wave models; optimising single-molecule localisation microscopy, and building computational models of the fly visual system. I will try to convey some thoughts on the challenges and shortcomings of current approaches.
 
-\emph{\textbf{Gilles Louppe: Towards reliable simulation-based inference
-and beyond}}
+\abstracttitle{Towards reliable simulation-based inference and beyond}
+\abstractauthor[Gilles Louppe]{Gilles Louppe (University of Liège, BE)}
+\license
 
-Modern approaches for simulation-based inference build upon deep
-learning surrogates to enable approximate Bayesian inference with
-computer simulators. In practice, the estimated
-posteriors\textquotesingle{} computational faithfulness is, however,
-rarely guaranteed. For example, Hermans et al., 2021 have shown that
-current simulation-based inference algorithms can produce posteriors
-that are overconfident, hence risking false inferences. In this talk, we
-will review the main inference algorithms and present Balanced Neural
-Ratio Estimation (BNRE), a variation of the NRE algorithm designed to
-produce posterior approximations that tend to be more conservative,
-hence improving their reliability.
+Modern approaches for simulation-based inference build upon deep learning surrogates to enable approximate Bayesian inference with computer simulators. In practice, the estimated posteriors' computational faithfulness is, however, rarely guaranteed. For example, Hermans et al., 2021 have shown that current simulation-based inference algorithms can produce posteriors that are overconfident, hence risking false inferences. In this talk, we will review the main inference algorithms and present Balanced Neural Ratio Estimation (BNRE), a variation of the NRE algorithm designed to produce posterior approximations that tend to be more conservative, hence improving their reliability.
 
-\emph{\textbf{Tom Dietterich: Modeling the data collection process: My
-journey}}
+\abstracttitle{Modeling the data collection process: My journey}
+\abstractauthor[Thomas G. Dietterich]{Thomas G. Dietterich (Oregon State University - Corvallis, US)}
+\license
 
-In this talk, I will describe three examples of my attempts to integrate
-subject-matter knowledge with machine learning. The first example
-involves predicting grasshopper infestations. I will sketch the
-methodology in which we first modeled the life cycle of the grasshoppers
-to capture the factors that affect their population. Unfortunately, most
-variables of interest were not measured, so we used the model to guide
-the construction of proxy variables. Ultimately, this project did not
-succeed, but it is hard to determine whether this is due to modeling
-problems or to the chaotic nature of the biological phenomenon.
+In this talk, I will describe three examples of my attempts to integrate subject-matter knowledge with machine learning. The first example involves predicting grasshopper infestations. I will sketch the methodology in which we first modeled the life cycle of the grasshoppers to capture the factors that affect their population. Unfortunately, most variables of interest were not measured, so we used the model to guide the construction of proxy variables. Ultimately, this project did not succeed, but it is hard to determine whether this is due to modeling problems or to the chaotic nature of the biological phenomenon.
