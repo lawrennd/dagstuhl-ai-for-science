@@ -429,8 +429,7 @@ domains.\footnote{Vargas, F., Thodoroff, P., Lawrence, N.D. and
   Likelihood, arXiv:2106.02081 {[}stat.ML{]},
   https\uline{://doi.org/10.48550/arXiv.2106.02081}}
 
-\subsection{\texorpdfstring{In biological sciences
-}{In biological sciences }}\label{in-biological-sciences}
+\subsection{In biological sciences}\label{in-biological-sciences}
 
 \textbf{The development and differentiation of cells into tissues and
 organs}\footnote{This example is inspired by Maren Büttner's talk, the
@@ -520,161 +519,53 @@ animals.\footnote{Gonçalves, P., Lueckmann, J.M., Deistler, M.,
   mechanistic models of neural dynamics eLife 9:e56261
   \href{https://doi.org/10.7554/eLife.56261}{\uline{https://doi.org/10.7554/eLife.56261}}}
 
-\textbf{Box 1: Talks given during this workshop session}
+\subsection{Talks given during this workshop session}
 
-\emph{\textbf{Markus Reichstein: Machine-learning-model-data-integration
-for a better understanding of the Earth System}}
+\abstracttitle{Machine-learning-model-data-integration for a better understanding of the Earth System}
+\abstractauthor[Markus Reichstein]{Markus Reichstein (MPI für Biogeochemistry - Jena, DE)}
+\license
 
-The Earth is a complex dynamic networked system. Machine learning, i.e.
-derivation of computational models from data, has already made important
-contributions to predict and understand components of the Earth system,
-specifically in climate, remote sensing and environmental sciences. For
-instance, classifications of land cover types, prediction of
-land-atmosphere and ocean-atmosphere exchange, or detection of extreme
-events have greatly benefited from these approaches. Such data-driven
-information has already changed how Earth system models are evaluated
-and further developed. However, many studies have not yet sufficiently
-addressed and exploited dynamic aspects of systems, such as memory
-effects for prediction and effects of spatial context, e.g. for
-classification and change detection. In particular new developments in
-deep learning offer great potential to overcome these limitations. Yet,
-a key challenge and opportunity is to integrate (physical-biological)
-system modelling approaches with machine learning into hybrid modelling
-approaches, which combines physical consistency and machine learning
-versatility. A couple of examples are given with focus on the
-terrestrial biosphere, where the combination of system-based and
-machine-learning-based modelling helps our understanding of aspects of
-the Earth system.
+The Earth is a complex dynamic networked system. Machine learning, i.e. derivation of computational models from data, has already made important contributions to predict and understand components of the Earth system, specifically in climate, remote sensing and environmental sciences. For instance, classifications of land cover types, prediction of land-atmosphere and ocean-atmosphere exchange, or detection of extreme events have greatly benefited from these approaches. Such data-driven information has already changed how Earth system models are evaluated and further developed. However, many studies have not yet sufficiently addressed and exploited dynamic aspects of systems, such as memory effects for prediction and effects of spatial context, e.g. for classification and change detection. In particular new developments in deep learning offer great potential to overcome these limitations. Yet, a key challenge and opportunity is to integrate (physical-biological) system modelling approaches with machine learning into hybrid modelling approaches, which combines physical consistency and machine learning versatility. A couple of examples are given with focus on the terrestrial biosphere, where the combination of system-based and machine-learning-based modelling helps our understanding of aspects of the Earth system.
 
-\emph{\textbf{Dina Machuve: Poultry Diseases Diagnostics Models using
-Deep Learning}}
+\abstracttitle{Poultry Diseases Diagnostics Models using Deep Learning}
+\abstractauthor[Dina Machuve]{Dina Machuve (DevData Analytics - A, TZ)}
+\license
 
-Coccidiosis, Salmonella, and Newcastle are the common poultry diseases
-that curtail poultry production if they are not detected early. In
-Tanzania, these diseases are not detected early due to limited access to
-agricultural support services by poultry farmers. Deep learning
-techniques have the potential for early diagnosis of these poultry
-diseases. In this study, a deep Convolutional Neural Network (CNN) model
-was developed to diagnose poultry diseases by classifying healthy and
-unhealthy fecal images. Unhealthy fecal images may be symptomatic of
-Coccidiosis, Salmonella, and Newcastle diseases. We collected 1,255
-laboratory-labeled fecal images and fecal samples used in Polymerase
-Chain Reaction diagnostics to annotate the laboratory-labeled fecal
-images. We took 6,812 poultry fecal photos using an Open Data Kit.
-Agricultural support experts annotated the farm-labeled fecal images.
-Then we used a baseline CNN model, VGG16, InceptionV3, MobileNetV2, and
-Xception models. We trained models using farm and laboratory-labeled
-fecal images and then fine-tuned them. The test set used farm-labeled
-images. The test accuracies results without fine-tuning were 83.06\% for
-the baseline CNN, 85.85\% for VGG16, 94.79\% for InceptionV3, 87.46\%
-for MobileNetV2, and 88.27\% for Xception. Finetuning while freezing the
-batch normalization layer improved model accuracies, resulting in
-95.01\% for VGG16, 95.45\% for InceptionV3, 98.02\% for MobileNetV2, and
-98.24\% for Xception, with F1 scores for all classifiers above 75\% in
-all four classes. Given the lighter weight of the trained MobileNetV2
-and its better ability to generalize, we recommend deploying this model
-for the early detection of poultry diseases at the farm level. There are
-open questions about the deployment of the model at the farm level and
-potential areas for further research.
+Coccidiosis, Salmonella, and Newcastle are the common poultry diseases that curtail poultry production if they are not detected early. In Tanzania, these diseases are not detected early due to limited access to agricultural support services by poultry farmers. Deep learning techniques have the potential for early diagnosis of these poultry diseases. In this study, a deep Convolutional Neural Network (CNN) model was developed to diagnose poultry diseases by classifying healthy and unhealthy fecal images. Unhealthy fecal images may be symptomatic of Coccidiosis, Salmonella, and Newcastle diseases. We collected 1,255 laboratory-labeled fecal images and fecal samples used in Polymerase Chain Reaction diagnostics to annotate the laboratory-labeled fecal images. We took 6,812 poultry fecal photos using an Open Data Kit. Agricultural support experts annotated the farm-labeled fecal images. Then we used a baseline CNN model, VGG16, InceptionV3, MobileNetV2, and Xception models. We trained models using farm and laboratory-labeled fecal images and then fine-tuned them. The test set used farm-labeled images. The test accuracies results without fine-tuning were 83.06\% for the baseline CNN, 85.85\% for VGG16, 94.79\% for InceptionV3, 87.46\% for MobileNetV2, and 88.27\% for Xception. Finetuning while freezing the batch normalization layer improved model accuracies, resulting in 95.01\% for VGG16, 95.45\% for InceptionV3, 98.02\% for MobileNetV2, and 98.24\% for Xception, with F1 scores for all classifiers above 75\% in all four classes. Given the lighter weight of the trained MobileNetV2 and its better ability to generalize, we recommend deploying this model for the early detection of poultry diseases at the farm level. There are open questions about the deployment of the model at the farm level and potential areas for further research.
 
-\emph{\textbf{Siddharth Sharma-Mishra: Simulation-based approaches to
-astrophysics dark matter searches}}
+\abstracttitle{Simulation-based approaches to astrophysics dark matter searches}
+\abstractauthor[Siddharth Mishra-Sharma]{Siddharth Mishra-Sharma (MIT - Cambridge, US)}
+\license
 
-We are at the dawn of a data-rich era in astrophysics and cosmology,
-with the capacity to extract useful scientific insights often limited by
-our ability to efficiently model complex processes that give rise to the
-data rather than the volume and nature of observations itself. I will
-describe recent progress in applying mechanistic forward modeling
-techniques to a range of astrophysical observations with the goal of
-searching for signatures of new physics, in particular the nature of
-dark matter. These leverage developments in machine learning-aided
-inference, e.g. using simulation-based inference as well as
-differentiable probabilistic programming, while encoding domain
-knowledge, in order to maximize the scientific output of current as well
-as future experiments.
+We are at the dawn of a data-rich era in astrophysics and cosmology, with the capacity to extract useful scientific insights often limited by our ability to efficiently model complex processes that give rise to the data rather than the volume and nature of observations itself. I will describe recent progress in applying mechanistic forward modeling techniques to a range of astrophysical observations with the goal of searching for signatures of new physics, in particular the nature of dark matter. These leverage developments in machine learning-aided inference, e.g. using simulation-based inference as well as differentiable probabilistic programming, while encoding domain knowledge, in order to maximize the scientific output of current as well as future experiments.
 
-\emph{\textbf{Maren Büttner: Single-cell transcriptomics}}
+\abstracttitle{Single-cell transcriptomics}
+\abstractauthor[Maren B\"uttner]{Maren B\"uttner (Helmholtz Zentrum München \& Universität Bonn)}
+\license
 
-Cells are the fundamental units of life. Understanding cellular
-processes is a basis for improving human health, disease diagnosis and
-monitoring. The advent of single-cell transcriptomics (scRNA-seq) allows
-characterizing the gene expression patterns of entire organs and
-organisms at single cell resolution. The human genome encodes more than
-30.000 genes, and high-throughput scRNA-seq methods create samples with
-tens of thousands of cell measurements. The analysis of such data
-requires a variety of methods from the machine learning field, e.g.
-dimensionality reduction techniques from PCA to variational
-autoencoders, graph-based clustering, classification of cell types,
-trajectory inference and causal inference of gene regulation to
-understand cell fate decision making. To date, scRNA-seq is a widely
-applied research technique, which has the potential for standard
-application in the clinics.~ My presentation focusses on current
-approaches for large-scale scRNA-seq data, current open questions, and
-implications for human health.~~~~~~
+Cells are the fundamental units of life. Understanding cellular processes is a basis for improving human health, disease diagnosis and monitoring. The advent of single-cell transcriptomics (scRNA-seq) allows characterizing the gene expression patterns of entire organs and organisms at single cell resolution. The human genome encodes more than 30.000 genes, and high-throughput scRNA-seq methods create samples with tens of thousands of cell measurements. The analysis of such data requires a variety of methods from the machine learning field, e.g. dimensionality reduction techniques from PCA to variational autoencoders, graph-based clustering, classification of cell types, trajectory inference and causal inference of gene regulation to understand cell fate decision making. To date, scRNA-seq is a widely applied research technique, which has the potential for standard application in the clinics.  My presentation focusses on current approaches for large-scale scRNA-seq data, current open questions, and implications for human health.
 
-\emph{\textbf{Christian Igel: Estimating ecosystem properties: Combining
-machine learning and mechanistic models}}
+\abstracttitle{Estimating ecosystem properties: Combining machine learning and mechanistic models}
+\abstractauthor[Christian Igel]{Christian Igel (University of Copenhagen, DK)}
+\license
+\jointwork{Martin Brandt, Rasmus Fensholt, Compton J. Tucker, Ankit Kariryaa, Kjeld Rasmussen, Christin Abel, Jennifer Small, Jerome Chave, Laura Vang Rasmussen, Pierre Hiernaux, Abdoul Aziz Diouf, Laurent Kergoat, Ole Mertz, Fabian Gieseke, Sizhuo Li, Katherine Melo}
+\abstractref[https://doi.org/10.1038/s41586-020-2824-5]{Brandt, M., Tucker, C.J., Kariryaa, A. et al. An unexpectedly large count of trees in the West African Sahara and Sahel. Nature 587, 78–82 (2020).}
+\abstractrefurl{https://doi.org/10.1038/s41586-020-2824-5}
 
-Progress in remote sensing technology and machine learning algorithms
-enables scaling up the monitoring of ecosystems. This leads to new
-knowledge about their status and dynamics, which will be helpful in land
-degradation assessment (e.g., deforestation), in mitigating poverty
-(e.g., food security, agroforestry, wood products), and in managing
-climate change (e.g., carbon sequestration). We apply deep learning for
-the mapping of individual trees and forests. Tree crowns are segmented
-in satellite imagery using fully convolutional neural networks. This
-provides detailed measurements of the canopy area and of the
-distribution of trees within and outside forests. Allometric equations
-are applied to estimate the biomasses (and thereby the stored carbon) of
-the individual trees. We use iterative gradient-based optimization of
-the allometric models and suggest techniques such as jackknife+ for
-quantifying the uncertainty of the model predictions. Tree biomass can
-also be directly inferred from LiDAR (laser imaging, detection, and
-ranging) measurements using 3D point cloud neural networks. This leads
-to highly accurate results without requiring a digital elevation
-model.~In a new project, we consider risk assessment of vector-borne
-diseases based on deep learning and remote sensing. Malaria risk is
-related to the housing conditions, for example, the type of roofing
-material, which can be determined from satellite images.
+Progress in remote sensing technology and machine learning algorithms enables scaling up the monitoring of ecosystems. This leads to new knowledge about their status and dynamics, which will be helpful in land degradation assessment (e.g., deforestation), in mitigating poverty (e.g., food security, agroforestry, wood products), and in managing climate change (e.g., carbon sequestration).
 
-~
+We apply deep learning for the mapping of individual trees and forests. Tree crowns are segmented in satellite imagery using fully convolutional neural networks. This provides detailed measurements of the canopy area and of the distribution of trees within and outside forests. Allometric equations are applied to estimate the biomasses (and thereby the stored carbon) of the individual trees. We use iterative gradient-based optimization of the allometric models and suggest techniques such as  jackknife+ for quantifying the uncertainty of the model predictions. Tree biomass can also be directly inferred from LiDAR (laser imaging, detection, and ranging) measurements using 3D point cloud neural networks. This leads to highly accurate results without requiring a digital elevation model. 
 
-\emph{\textbf{Ieva Kazlauskaite: Partial differential equations and
-Variational Bayes}}
+In a new project, we consider risk assessment of vector-borne diseases based on deep learning and remote sensing. Malaria risk is related to the housing conditions, for example, the type of roofing material, which can be determined from satellite images.
 
-Inverse problems involving partial differential equations (PDEs) are
-widely used in science and engineering. Although such problems are
-generally ill-posed, different regularisation approaches have been
-developed to ameliorate this problem. Among them is the Bayesian
-formulation, where a prior probability measure is placed on the quantity
-of interest. The resulting posterior probability measure is usually
-analytically intractable. The Markov Chain Monte Carlo (MCMC) method has
-been the go-to method for sampling from those posterior measures. MCMC
-is computationally infeasible for large-scale problems that arise in
-engineering practice. Lately, Variational Bayes (VB) has been recognised
-as a more computationally tractable method for Bayesian inference,
-approximating a Bayesian posterior distribution with a simpler trial
-distribution by solving an optimisation problem. The talk covered some
-recent experiences of applying Bayesian inference, generative models and
-probabilistic programming languages in the context of learning material
-properties in civil engineering and in ice sheet and ice core modelling.
-The main shortcomings of PPLs and differentiable problems were
-highlighted.~
+\abstracttitle{Partial differential equations and Variational Bayes}
+\abstractauthor[Ieva Kazlauskaite]{Ieva Kazlauskaite (University of Cambridge, GB)}
+\license
 
-\emph{\textbf{Francisco Vargas: The Schrödinger bridge problem}}
+Inverse problems involving partial differential equations (PDEs) are widely used in science and engineering. Although such problems are generally ill-posed, different regularisation approaches have been developed to ameliorate this problem. Among them is the Bayesian formulation, where a prior probability measure is placed on the quantity of interest. The resulting posterior probability measure is usually analytically intractable. The Markov Chain Monte Carlo (MCMC) method has been the go-to method for sampling from those posterior measures. MCMC is computationally infeasible for large-scale problems that arise in engineering practice. Lately, Variational Bayes (VB) has been recognised as a more computationally tractable method for Bayesian inference, approximating a Bayesian posterior distribution with a simpler trial distribution by solving an optimisation problem. The talk covered some recent experiences of applying Bayesian inference, generative models and probabilistic programming languages in the context of learning material properties in civil engineering and in ice sheet and ice core modelling. The main shortcomings of PPLs and differentiable problems were highlighted.
 
-Recent works in diffusion-based models have been achieving competitive
-results across generative modelling and inference, in this presentation
-we propose to explore a unifying framework based on Schrodinger bridges
-to explore/explain diffusion-based methodology. The Schrödinger bridge
-problem (SBP) finds the most likely stochastic evolution between two
-probability distributions given a prior (reference) stochastic
-evolution. Recently SBP based methodology has made its way into
-generative modelling , sampling, and inference. In this talk we propose
-the exploration of a unifying framework for the aforementioned works
-based on the renowned IPF/Sinkhorn algorithm. The motivation behind this
-is to cast a unifying lens via the Schrodinger perspective relating
-inference, sampling and transport, in a way that we can leverage many of
-the useful techniques and heuristics from each field to benefit each
-other.
+\abstracttitle{The Schrödinger bridge problem}
+\abstractauthor[Francisco Vargas]{Francisco Vargas (University of Cambridge, GB)}
+\license
 
+Recent works in diffusion-based models have been achieving competitive results across generative modelling and inference, in this presentation we propose to explore a unifying framework based on Schrodinger bridges to explore/explain diffusion-based methodology. The Schrödinger bridge problem (SBP) finds the most likely stochastic evolution between two probability distributions given a prior (reference) stochastic evolution. Recently SBP based methodology has made its way into generative modelling , sampling, and inference. In this talk we propose the exploration of a unifying framework for the aforementioned works based on the renowned IPF/Sinkhorn algorithm. The motivation behind this is to cast a unifying lens via the Schrodinger perspective relating inference, sampling and transport, in a way that we can leverage many of the useful techniques and heuristics from each field to benefit each other.
