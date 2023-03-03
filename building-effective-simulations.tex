@@ -1,0 +1,360 @@
+\section{Building effective
+simulations}\label{building-effective-simulations}
+
+\subsection{Moving upstream}\label{moving-upstream}
+
+Science proceeds through hypothesis, observation and analysis. For
+hundreds of years, researchers have advanced the frontiers of knowledge
+by collecting data, compressing those observations into a model, then
+computing that model to create representations of how the world works,
+generating new insights about natural and physical phenomena and
+theories about the systems from which those phenomena emerge in the
+process \citep{Blei-build2014}.
+These mathematical models rely on numerical methods: algorithms that
+help solve mathematical problems where no analytical solution is
+available. Today, data collection and the basic computational tasks
+involved in its analysis -- linear algebra, optimisation, simulation,
+and so on -- remain consistent features of the scientific process.
+Progress in machine learning, however, has changed the modelling
+landscape.
+
+`AI for science' offers a data-centric approach to modelling and
+simulating the world. Operating alongside the traditional mathematical
+models that are central to many disciplines, machine learning provides
+data-centric analytical methods that can be integrated across the
+scientific pipeline, for example enabling sophisticated simulations of
+real-world systems. These simulations can be used to inform model
+development, test hypotheses and shape areas of research focus, or
+unlock insights from complex data.
+
+\subsection{Nurturing a diversity of
+approaches}\label{nurturing-a-diversity-of-approaches}
+
+Simulations are a well-established tool for scientific discovery. Their
+fundamental task is to allow data sampling from a model where the
+differences between simulation and the real world are reduced as far as
+feasible, to enable experimentation or testing of the impact of
+different perturbations, while allowing some measure of simplification
+of the system. Effective simulators allow researchers to move from
+theory to an understanding of what data should look like.
+
+Domains such as particle physics, protein folding, climate science, and
+others, have developed complex simulations that use known theories and
+parameters of interest to make predictions about the system of study. AI
+for science can be brought in to speed up some of these through
+surrogate models. Machine learning can complement `traditional'
+approaches to scientific simulation, adding components that model the
+most uncertain elements of a system to strongly mechanistic models that
+might otherwise be too restrictive in their assumptions.
+
+Much early excitement surrounding AI for science was rooted in the
+reverse process, asking: instead of starting with theory, could
+researchers instead start with the large amounts of data available in
+many areas of research and, from that data, build an understanding of
+what an underpinning theory might be? Given a set of observations, is it
+possible to find parameters for a model that result in simulations that
+reflect the measured data? Such simulation-based inference (SBI) offers
+the opportunity to generate novel insights across scientific
+disciplines.
+
+To enable such analysis, machine learning methods are needed that can
+extract insights from high-dimensional, multi-modal data, in ways that
+are labour- and compute-efficient \cite{Cranmer-frontier2020}. The field of
+probabilistic numerics offers a way to flexibly combine information from
+mechanistic models with insights from data, solving numerical problems
+through statistical approaches \cite{Hennig-probabilistic2022}. Operationalising these methods
+to create effective data-driven simulations requires balancing different
+model characteristics. The model's parameters must be specified to a
+sufficient level of granularity to describe the real-world system, while
+operating at a level of abstraction that is amenable to analysis and
+computation; almost all models are `wrong' or falsifiable because of
+this, but some level of abstraction is necessary to make them useful for
+analysis. The simulation must also be designed to be robust, and able to
+generate inferences that align with real-world observations.
+
+\subsection{Truth, truthiness, and interfacing with the real
+world}\label{truth-truthiness-and-interfacing-with-the-real-world}
+
+The excitement underpinning AI for science stems from the aspiration to
+unearth new understandings of the world, leveraging data to advance the
+frontiers of knowledge. While subject to their own limitations, the
+scientific community has developed checks and balances to scrutinise new
+knowledge and maintain the rigour of scientific inquiry. Recent years
+have seen a variety of challenges or benchmarks emerge in the machine
+learning community that have come to represent the field's expected
+standards of performance from algorithms on defined tasks. However,
+these standards do not necessarily align with the expectations of domain
+researchers.\footnote{Hermans, J., Delaunoy, A., Rozet, F., Wehenkel, A.
+  and Louppe, G. (2021), Averting A Crisis In Simulation-Based
+  Inference, arXiv:2110.06581 {[}stat.ML{]},
+  \href{https://doi.org/10.48550/arXiv.2110.06581}{\uline{https://doi.org/10.48550/arXiv.2110.06581}}}
+As data-centric simulations are integrated into scientific process,
+machine learning researchers must consider their responsibility in
+maintaining the integrity of the domains into which they are deployed,
+raising the question: what guardrails are needed to ensure researchers
+can be confident in the outputs from machine learning-enabled
+simulations?
+
+A variety of diagnostic tests can help. Core to many of these
+diagnostics is analysis of whether a model is computationally faithful.
+In short: the inferences generated by a simulation should reflect those
+from observations.\footnote{Ibid.} One approach to checking this
+alignment is to consider the consistency of distributions from inferred
+and observed datasets. If the model is a good fit, the data it generates
+should broadly match the data observed through experimentation.
+
+Underpinning these diagnostics is a fundamental question about how to
+manage uncertainty, in a context where different failure modes have
+different implications. Put simply: when a model fails, is it worse to
+be over-confident in its results, or over-conservative? In the
+scientific context, over-confidence seems more likely to result in
+negative outcomes, whether through giving misleading interpretations or
+results or driving lines of enquiry in unproductive directions. Machine
+learning methods can be designed for conservatism, reducing the risk of
+false positives.
+
+Implementing a schedule of model building, computing, critiquing, and
+repeating can refine this process. One lesson from experiences of
+building machine learning-enabled simulations is that there can be a
+disconnect between how machine learning approaches inference and model
+building, and how the same task is approached by domain scientists. From
+a domain perspective, model building seems naturally an iterative
+process: collect data, fit a model, find errors or areas for
+improvement, update the model, and so on. This iterative process is
+guided by expert intuition and knowledge; deep understanding of the
+system under study and how it responds to perturbation. Machine learning
+research has developed practices for prior elicitation -- using domain
+knowledge to shape the structure of probabilistic models -- but the
+nuances of this domain intuition are often not easily captured a priori,
+instead emerging when models fail as an informal sense of what `feels'
+like it should be true. This qualitative input is vital in building
+effective simulations. It requires close collaboration, which in turn
+requires an investment of time and energy from domain communities,
+generated through mutual trust, incentives, and long-term
+relationship-building.
+
+\subsection{Connecting simulation to
+practice}\label{connecting-simulation-to-practice}
+
+Computational tools are central to the effective deployment of machine
+learning-enabled simulation. The function and form of such tools must
+align with the requirements of the community deploying them. Designing
+computational systems to match user needs -- and work effectively in
+practice -- requires both effective software engineering and close
+collaboration with domain groups that can articulate the requirements
+and expectations of those working in the field. To remain effective over
+the longer-term, such systems must leverage effective software
+engineering practices, including embedding version control and building
+interfaces that work with other models and systems. Those practices, and
+the software systems that emerge from them, must be designed for the
+needs of those using the system, drawing from existing best practices in
+software engineering, but adapting those practices to reflect the needs
+of the domain for deployment.
+
+Constructing computational tools requires a mix of technical insight and
+craft skill -- of knowledge and know how. Tools produced by the machine
+learning community differ in their usefulness on different problems:
+some work well for certain tasks, but not for others. Without access to
+such craft skills, those outside the `AI for science' community can find
+it challenging to determine which tools to use for which purposes,
+reducing the generalisability of existing methods and approaches. This
+challenge becomes particularly visible when practitioners are tightly
+integrated into the analysis pipeline, such as in applications in
+developmental biology, in the developing world, and in data-centric
+engineering. Widening access to the field will require user guides that
+characterise which simulations are effective for which tasks or
+purposes, supported by case studies or user stories that help demystify
+how machine learning can work in practice.
+
+\hypertarget{directions}{%
+\subsection{Directions}\label{directions}}
+
+Machine learning typically requires an explicit representation of a
+likelihood, but these are often difficult to compute. Further advances
+in SBI are necessary to allow researchers to identify model parameters
+from data.
+
+\begin{itemize}
+\item
+  Techniques such as likelihood-free inference can enhance existing
+  Bayesian methods for inferring posterior estimations.\footnote{Alsing,
+    J., Charnock, T., Feeney, S. and Wandelt, B. (2019) Fast
+    likelihood-free cosmology with neural density estimators and active
+    learning, arXiv:1903.00007 {[}astro-ph.CO{]},
+
+    \uline{\url{https://doi.org/10.48550/arXiv.1903.00007}}}
+\item
+  Building surrogate models,\footnote{See above, and Lavin, A., Zenil,
+    H., Paige, B., Krakauer, D., Gottschlich, J., Mattson, T.,
+    Anandkumer, A., Choudry, S., Rocki, K., Baydin, A.G., Prunkl, C.,
+    Paige, B., Isayev, O., Peterson, E., McMahon, P.L., Macke, J.,
+    Cranmer, K., Zhang, J., Wainwright, H., Hanuka, A., Veloso, M.,
+    Assefra, S., Zheng, S., and Pfeffer, A. (2021) Simulation
+    Intelligence: Towards a New Generation of Scientific Methods,
+    arXiv:2112.03235 {[}cs.AI{]},
+    \href{https://doi.org/10.48550/arXiv.2112.03235}{\hfill\break
+    \uline{https://doi.org/10.48550/arXiv.2112.03235}}} using Bayesian
+  approaches for simulation planning to optimise information
+  gain,\footnote{See, for example, Cranmer, K., Heinrich, L., Head, T.
+    and Louppe, G. Active sciencing, at:
+    \href{https://github.com/cranmer/active_sciencing}{\uline{https://github.com/cranmer/active\_sciencing}}}
+  or deploying emulations\footnote{Boelts, J., Lueckmann, J.M., Gao, R.,
+    and Macke, J.H. (2022) Flexible and efficient simulation-based
+    inference for models of decision-making eLife 11:e77220
+    \href{https://doi.org/10.7554/eLife.77220}{\uline{https://doi.org/10.7554/eLife.77220}}}
+  can also enhance the efficiency of simulations.
+\item
+  Probabilistic numerics offers a route to develop statistically-optimal
+  algorithms that are amenable to comprehensive uncertainty
+  quantification, leveraging Gaussian Process-based Ordinary
+  Differential Equation (ODE) solvers to pursue simulation as an
+  inference problem.\footnote{Kersting, H. (2021) Uncertainty-aware
+    numerical solutions of ODE's by Bayesian Filtering, available at:
+    \href{https://hanskersting.github.io/publication/phd-thesis/}{\uline{https://hanskersting.github.io/publication/phd-thesis/}}}
+\end{itemize}
+
+Operationalising these approaches will also require new toolkits to
+support implementation of probabilistic numerical methods.\footnote{See,
+  for example, the previous Dagstuhl meeting on this topic:
+  \href{https://www.probabilistic-numerics.org/meetings/2021_Dagstuhl/}{\uline{https://www.probabilistic-numerics.org/meetings/2021\_Dagstuhl/}}
+  and Schmidt, J., Kramer, N. and Hennig, P. (2021) A Probabilistic
+  State Space Model for Joint Inference from Differential Equations and
+  Data, arXiv:2103.10153 {[}stat.ML{]},
+  \href{https://doi.org/10.48550/arXiv.2103.10153}{\uline{https://doi.org/10.48550/arXiv.2103.10153}}}
+
+Computational faithfulness -- alignment of inferred parameters with
+scientific knowledge -- can be achieved through:
+
+\begin{itemize}
+\item
+  Diagnostic checks in the self-consistency of the Bayesian joint
+  distribution, which measure the scientific quality of the regions
+  computed by Bayesian SBI methods.\footnote{Hermans, J., Delaunoy, A.,
+    Rozet, F., Wehenkel, A. and Louppe, G. (2021), Averting A Crisis In
+    Simulation-Based Inference, arXiv:2110.06581 {[}stat.ML{]},
+    \href{https://doi.org/10.48550/arXiv.2110.06581}{\uline{https://doi.org/10.48550/arXiv.2110.06581}}
+    and Mishra-Sharma, S. (2021) Inferring dark matter substructure with
+    astrometric lensing beyond the power spectrum, arXiv:2110.01620
+    {[}astro-ph.CO{]},
+    \href{https://doi.org/10.48550/arXiv.2110.01620}{\uline{https://doi.org/10.48550/arXiv.2110.01620}}}
+  Checking for self-consistency gives a sense whether the model is `good
+  enough' (ie whether the inference engine gives a good sense of the
+  posterior).
+\item
+  Enforcing conservative neural ratio estimation through binary
+  classifier specification, producing more conservative posterior
+  approximations.\footnote{Delaunoy, A., Hermans, J., Rozet, F.,
+    Wehenkel, A. and Louppe, G. (2022) Towards Reliable Simulation-Based
+    Inference with Balanced Neural Ratio Estimation, arXiv:2208.13624
+    {[}stat.ML{]},
+    \href{https://doi.org/10.48550/arXiv.2208.13624}{\uline{https://doi.org/10.48550/arXiv.2208.13624}}}
+\item
+  Hybrid modelling, which combines machine learning components learned
+  from data with the mechanistic components specified by existing domain
+  knowledge.\footnote{Wehenkel, A., Behrmann, J., Hsu, H., Sapiro, G.,
+    Louppe, G., and Jacobsen, J.H. (2022) Robust Hybrid Learning With
+    Expert Augmentation, arXiv:2202.03881 {[}cs.LG{]},
+    https://doi.org/10.48550/arXiv.2202.03881}
+\item
+  Further study of the impact of model misspecification could also help
+  generate new robustness diagnostic checks.\footnote{\href{https://arxiv.org/abs/2209.01845}{Cannon,}
+    P., Ward, D. and Schmon, S.M. (2022) Investigating the Impact of
+    Model Misspecification in Neural Simulation-based Inference,
+    arXiv:2209.01845 {[}stat.ML{]},
+    \uline{https://doi.org/10.48550/arXiv.2209.01845}}
+\end{itemize}
+
+`Digital twins' have recently received much attention as a tool to
+exploit sophisticated simulations. In Earth sciences, for example,
+ambitious efforts to develop a digital twin of the Earth propose to
+allow more accurate forecasting, visualisation, or scenario-testing of
+the impact of climate change and efforts to mitigate it.\footnote{For
+  example: European Commission (2022) Destination Earth -- new digital
+  twin of the Earth will help tackle climate change and protect nature,
+  available at:
+  https://ec.europa.eu/commission/presscorner/detail/en/IP\_22\_1977}
+The challenge is to integrate different models or components of a system
+-- for example, connecting atmospheric models, with land models, with
+models of human behaviour -- in a way that represents the complete Earth
+system. That requires consideration of the different levels of
+granularity with which these different models operate: economic models
+of human behaviour, for example, operate with different assumptions and
+levels of enquiry in comparison to physical models of ocean circulation.
+The full range of granularities becomes apparent when considering that
+specific applications, such as disease monitoring on poultry farms, sit
+within the wider ecosystem of the natural and built environment. A
+digital twin needs to make choices about what levels of granularity it
+is operating at, from the scale of the poultry farm to the planet. The
+questions that emerge from such ambitions is: what level of granularity
+is helpful or necessary to deliver effective results? And what
+interfaces between diverse models might be possible?
+
+\textbf{Box 2: Talks given during this workshop session}
+
+\emph{\textbf{Philipp Hennig: Information from data and compute in
+scientific inference}}
+
+Simulations are central to scientific inference. Simulators are
+typically treated as black boxes, with the inference loop wrapped around
+them. This approach is convenient for the programming scientists, but
+can be highly inefficient. Probabilistic numerical methods represent
+computational and empirical data in the same language, which allows for
+inference from mechanistic knowledge and empirical data in one combined
+step. I will argue that scientific computing needs to embrace such new
+computational paradigms to truly leverage ML in science, which also
+requires rethinking scientific codebases.
+
+\emph{\textbf{Hans Kersting: ODE filters and smoothers: probabilistic
+numerics for mechanistic modelling}}
+
+Probabilistic numerics (PN) unifies statistical and numerical
+approximations by formulating them in the same language of statistical
+(Bayesian) inference. For ODEs, a well-established probabilistic
+numerical method is ODE filters and smoothers which can help to deal
+more aptly with uncertainty in mechanistic modeling. In the first half
+of this talk, we will first introduce PN and then present ODE
+filters/smoothers as a specific instance of PN. In the second half, we
+will discuss how ODE filters/smoothers can improve mechanistic modeling
+in the natural sciences and present a recent application of inferring
+the parameters of real-word dynamical system.
+
+\emph{\textbf{Jakob Macke: Four short stories on simulation-based
+inference}}
+
+Many fields of science make extensive use of simulations expressing
+mechanistic forward models, requiring the use of simulation-based
+inference methods. I will share experiences and lessons learned from
+four applications: Describing the dynamics and energy consumptions of
+neural networks in the stomatogastric ganglion; inferring parameters of
+gravitational wave models; optimising single-molecule localisation
+microscopy, and building computational models of the fly visual system.
+I will try to convey some thoughts on the challenges and shortcomings of
+current approaches.~
+
+\emph{\textbf{Gilles Louppe: Towards reliable simulation-based inference
+and beyond}}
+
+Modern approaches for simulation-based inference build upon deep
+learning surrogates to enable approximate Bayesian inference with
+computer simulators. In practice, the estimated
+posteriors\textquotesingle{} computational faithfulness is, however,
+rarely guaranteed. For example, Hermans et al., 2021 have shown that
+current simulation-based inference algorithms can produce posteriors
+that are overconfident, hence risking false inferences. In this talk, we
+will review the main inference algorithms and present Balanced Neural
+Ratio Estimation (BNRE), a variation of the NRE algorithm designed to
+produce posterior approximations that tend to be more conservative,
+hence improving their reliability.
+
+\emph{\textbf{Tom Dietterich: Modeling the data collection process: My
+journey}}
+
+In this talk, I will describe three examples of my attempts to integrate
+subject-matter knowledge with machine learning. The first example
+involves predicting grasshopper infestations. I will sketch the
+methodology in which we first modeled the life cycle of the grasshoppers
+to capture the factors that affect their population. Unfortunately, most
+variables of interest were not measured, so we used the model to guide
+the construction of proxy variables. Ultimately, this project did not
+succeed, but it is hard to determine whether this is due to modeling
+problems or to the chaotic nature of the biological phenomenon.

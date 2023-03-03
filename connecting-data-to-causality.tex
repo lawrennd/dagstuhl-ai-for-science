@@ -1,0 +1,364 @@
+\section{Connecting data to
+causality}\label{connecting-data-to-causality}
+
+\subsection{Causality in science and
+data}\label{causality-in-science-and-data}
+
+Most scientific endeavours have a causal element: researchers want to
+characterise how a system works, why it works that way, and what happens
+when it is perturbed. How researchers identify cause-and-effect
+relationships varies across domains. For some disciplines, the process
+of hypothesis design -- data collection -- model development provides
+the core structure for interrogating how a system works. In others,
+where experimentation is more difficult, researchers may rely on natural
+experiments and observations to compare the response of a system under
+different conditions. Those studying the Earth system, for example, have
+little scope to replicate planetary conditions, so instead rely on
+observational data and modelling to identify the impact of different
+interventions. These different approaches, however, share a modelling
+approach in which researchers provide variables to create structural,
+causal models.
+
+In contrast, machine learning proceeds by learning representations or
+rules from data, based on statistical information, rather than
+structured rules about how a system works (such as physical laws).
+Causal inference -- the ability to identify cause-and-effect
+relationships in data -- has been a core aim of AI research, in service
+of both wider ambitions to replicate intelligence in machines and
+efforts to create AI systems that are robust in deployment. However, in
+many respects efforts to integrate causal inference into AI systems have
+yet to deliver.\footnote{Schölkopf, B., Locatello, F., Bauer, S., Ke,
+  N.R., Kalchbrenner, N., Goyal, A., and Bengio, Y. (2021) Towards
+  Causal Representation Learning,
+  \href{https://arxiv.org/abs/2102.11107}{\uline{arXiv:2102.11107}}
+  {[}cs.LG{]},
+  \href{https://doi.org/10.48550/arXiv.2102.11107}{\uline{https://doi.org/10.48550/arXiv.2102.11107}}}
+
+An apocryphal story in AI tells of efforts by US researchers during the
+1980s to train a computer system that could distinguish between images
+of tanks from the US and USSR. The resulting system delivered high
+accuracy on its training data, but failed repeatedly in practice. The
+system was subsequently found to be classifying images based on their
+resolution and background features -- is the image grainy? Does it
+contain snow? -- rather than the tanks themselves. It found patterns in
+the data that were co-incident, rather than causal. That same error has
+real-world implications for the AI systems deployed today. In medical
+sciences, AI systems trained to detect collapsed lungs from medical
+images have been proven inaccurate, after the model was found to have
+learned to detect the tube inserted into the lung to enable a patient to
+breath as a response to its collapse, rather than the physical features
+of the lung itself.\footnote{Rueckel, J., Trappmann, L., Schachtner, B.,
+  Wesp, P., Hoppe, B.F., Fink, N., Ricke, J., Dinkel, J., Ingrisch, M.,
+  and Sabel, B.O. (2020) Impact of Confounding Thoracic Tubes and
+  Pleural Dehiscence Extent on Artificial Intelligence Pneumothorax
+  Detection in Chest Radiographs. Invest Radiol. 2020
+  Dec;55(12):792-798. doi: 10.1097/RLI.0000000000000707. PMID: 32694453.
+  \href{https://pubmed.ncbi.nlm.nih.gov/32694453/}{\uline{https://pubmed.ncbi.nlm.nih.gov/32694453/}}}
+In medical sciences, deployment of such systems could put patient care
+at risk. In social sciences, these AI design and data bias failures can
+combine to marginalise vulnerable populations.\footnote{Emspak, J.
+  (2016) How a machine learns prejudice, Scientific American Blogs,
+  available at:
+  \href{https://www.scientificamerican.com/article/how-a-machine-learns-prejudice/}{\uline{https://www.scientificamerican.com/article/how-a-machine-learns-prejudice/}}}
+
+Conversely, an understanding of the structures within data can improve
+the accuracy of machine learning analyses. In exoplanet discovery, for
+example, machine learning is used as a tool to detect variations in
+light signals from large-scale astronomical datasets. The movement of
+exoplanets around stars results in periodic changes to the light signals
+from those stars, as the planet obscures them in its transit. Machine
+learning can detect those signals and predict where exoplanets might be
+located, but the data is often noisy. Noticing that the structure of
+this noise was consistent across a number of stars, which were too
+distant from each other to be interacting, researchers concluded that
+instrumentation effects were distorting the data, and developed a method
+to model those effects and remove them from exoplanet predictions. The
+result was an efficient method for exoplanet identification that
+subsequently contributed to the discovery of the first potentially
+habitable planet.\footnote{Schölkopf, B. (2019) Causality for machine
+  learning, arXiv:1911.10500 {[}cs.LG{]},
+  \href{https://doi.org/10.1145/3501714.3501755}{\uline{https://doi.org/10.1145/3501714.3501755}}}
+
+\subsection{Causal models as a route to advancing the science of AI and
+AI for
+science}\label{causal-models-as-a-route-to-advancing-the-science-of-ai-and-ai-for-science}
+
+Many of these errors in misdiagnosing cause-effect relationships arise
+from a core assumption in many machine learning methods: that data
+follows an independent and identical distribution (IID). In practice,
+almost all data from real-world, or complex, systems will violate this
+assumption, given the interconnectedness of different variables. The
+task of causality in machine learning is to create models that can
+manage this violation, distinguishing between patterns in data that
+simply co-occur and patterns that are causal. The resulting AI systems
+would be able to solve a task in many different environments, based on
+an understanding of the fundamental causal mechanisms in a
+system.\footnote{Peters, J., Janzing, D. and Schölkopf, B. (2017)
+  Elements of causal inference: foundations and learning algorithms, MIT
+  Press, Cambridge, MA, ISBN 9780262037310} They would be more robust in
+deployment, being less likely to make incorrect predictions as the
+environment in which they operate changes, and could be more efficient
+to train and deploy. They would also represent a step towards
+replicating human- or animal-like intelligence, being able to solve a
+task in many different environments.
+
+In these regards, causal machine learning offers a route to balancing
+the widespread utility of statistical modelling with the strengths of
+physical models. Causality allows models to operate at a level of
+abstraction beyond strongly mechanistic approaches, such as those based
+on differential equations, moving along a continuum from mechanistic to
+data-driven modelling. They provide researchers with the ability to make
+accurate predictions under conditions of dataset shift (enable out of
+distribution generalisation); can provide insights into the physical
+processes that drive the behaviour of a system; unlock progress towards
+AI systems that `think' in the sense of acting in an imagined space;
+while also leveraging insights that can be learned from data, but not
+otherwise detected.\footnote{For reference, see the table on page 11 of
+  reference 69.} They also offer opportunities to explore
+counterfactuals in complex systems, asking what the impact of different
+interventions could have been, opening a door to the development of
+simulation-based decision-making tools.\footnote{Such tools may have
+  particular relevance in policy. For example: Mastakouri, A.A. and
+  Schölkopf, B. (2020) Causal analysis of Covid-19 spread in Germany,
+  arXiv:2007.11896 {[}stat.AP{]},
+  \href{https://doi.org/10.48550/arXiv.2007.11896}{\uline{https://doi.org/10.48550/arXiv.2007.11896}}}
+
+Achieving this potential requires technical developments in a number of
+directions, but can also yield more effective AI systems. Such systems
+would:
+
+\begin{itemize}
+\item
+  Be able to operate on out of distribution data, performing the task
+  for which they are trained in environments with varying conditions.
+\item
+  Be able to learn how to perform a task based on relatively few
+  examples of that task in different conditions, or be able to rapidly
+  adapt what they have learned for application in new environments
+  through transfer, one-shot, or lifelong learning approaches.
+\item
+  Support users to analyse the impact of different interventions on a
+  system, providing explanations or ways of attributing credit to
+  different actions.
+\item
+  Respond to different ways of transmitting information between
+  individuals and groups, enabling effective communication with their
+  users or other forms of cultural learning.
+\end{itemize}
+
+\subsection{From methods to
+application}\label{from-methods-to-application}
+
+Achieving the level of technical sophistication required for causal
+modelling requires careful model design, based on close collaboration
+between machine learning and domain scientist. The process of specifying
+what to represent in a causal machine learning system involves a series
+of `micro-decisions' about how to construct the model, negotiated by
+integrating machine learning and domain expertise. In this regard,
+causal machine learning can be a positive catalyst for deeper
+interdisciplinary collaboration; model construction can be a convening
+point for sharing understandings between domains. However, the level of
+detail required can also be in tension with efforts to promote
+widespread adoption of AI methods across research. The availability of
+easy-to-use, off-the-shelf AI tools has been an enabler for adoption in
+many domains. The hand-crafted approach inherent to current causal
+methods renders them less accessible to non-expert users. Part of the
+challenge for the field is to make such methods more broadly accessible
+through open-source toolkits or effective software engineering
+practices.
+
+This tension between specification and learning also highlights the
+importance of nurturing a diversity of methods across the spectrum from
+data-driven to mechanistic modelling. The domain (or, how much prior
+knowledge is available and what knowledge should be included), research
+question of interest, and other practical factors (including, for
+example, compute budget), will shape where along this spectrum
+researchers wish to target their modelling efforts.
+
+While pursuing practical applications, advances in causal inference
+could help answer broader questions about the nature of intelligence and
+the role of causal representations in human understanding of how the
+worlds work. Much of human understanding of the world arises from
+observing cause and effect; seeing what reaction follows an intervention
+-- that an object falls when dropped, for example -- in a way that
+generalises across circumstances and does not require detailed
+understanding of mathematical or physical laws. Integrating this ability
+into machine learning would help create systems that could be deployed
+on a variety of tasks. The process of building causal machine learning
+forces researchers to interrogate the nature of causal representations
+-- What are they? How are they constructed from the interaction between
+intelligent agents and the world? By what mechanism can such agents
+connect low-level observations to high-level causal variables? -- which
+may in turn support wider advances in the science of AI.
+
+\subsection{Directions}\label{directions-1}
+
+Causality in machine learning is a long-standing and complex challenge.
+In the context of scientific discovery, learning strategy, model design,
+and encoding domain knowledge all play a role in helping identify
+cause-effect relationships.
+
+Different learning strategies can improve the `generalisability' of
+machine learning, increasing its performance on previously unseen tasks,
+based on learning underlying structure of a task or environment in ways
+that can contribute to broader understandings of causality. Such
+learning strategies include:
+
+\begin{itemize}
+\item
+  Transfer learning, taking learning from one task or domain and
+  applying it in another.
+\item
+  Multi-task learning, enabling a system to solve multiple tasks in
+  multiple environments.
+\item
+  Adversarial learning, to reduce the vulnerability of models to
+  performance degradation on out-of-distribution data.
+\item
+  Causal representation learning, defining variables that are related by
+  causal models.\footnote{Schölkopf, B. (2019) Causality for machine
+    learning, arXiv:1911.10500 {[}cs.LG{]},
+    \href{https://doi.org/10.1145/3501714.3501755}{\uline{https://doi.org/10.1145/3501714.3501755}}}
+\item
+  Reinforcement learning strategies that reward agents for identifying
+  policies based on invariances over different conditions.
+\end{itemize}
+
+Across these new learning approaches, attempts to establish causal
+mechanisms are also prompting progress in machine learning theory,
+through statistical formulations of core principles.\footnote{Guo, S.,
+  Tóth, V., Schölkopf, B. and Huszár, F. (2022) Causal de Finetti: On
+  the Identification of Invariant Causal Structure in Exchangeable Data,
+  arXiv:2203.15756 {[}stat.ML{]},
+  https://doi.org/10.48550/arXiv.2203.15756}
+
+Combining different methods can also enhance the functionality of an AI
+system. For example:
+
+\begin{itemize}
+\item
+  Neural ODEs has been shown to identify causal structures in time
+  series data.\footnote{Aliee, H., Theis, F. J. and Kilbertus, N. (2021)
+    Beyond Predictions in Neural ODEs: Identification and Interventions,
+    arXiv:2106.12430 {[}cs.LG{]},
+    \href{https://doi.org/10.48550/arXiv.2106.12430}{\uline{https://doi.org/10.48550/arXiv.2106.12430}}}
+\item
+  Describing causal effects as objective functions in constrained
+  optimisation problems can deliver a form of stochastic causal
+  programming.\footnote{Padh, K., Zeitler, J., Watson, D., Kusner, M.,
+    Silva, R., and Kilbertus, N. (2022) Stochastic Causal Programming
+    for Bounding Treatment Effects, arXiv:2202.10806 {[}stat.ML{]},
+    \url{https://doi.org/10.48550/arXiv.2202.10806}}
+\item
+  Technical interventions\footnote{\href{https://arxiv.org/abs/2005.03353}{Jakobsen,}
+    M. E., and Peters, J. (2020) Distributional robustness of K-class
+    estimators and the PULSE, arXiv:2005.03353 {[}econ.EM{]},
+    \href{https://doi.org/10.48550/arXiv.2005.03353}{\uline{https://doi.org/10.48550/arXiv.2005.03353}}}
+  can constrain or optimise a model towards causal outcomes. As with
+  simulation design, diagnostic checks can also help identify
+  cause-effect relationships by examining model outputs against `reality
+  criteria',\footnote{Including syntactic, semantic, and pragmatic
+    elements: Stadler, M. \& Kruse, P. (1990) Über Wirklichkeitskrite-
+    rien. In: Riegas, V. \& Vetter, C. (eds.) Zur Biologie der
+    Kognition. Frankfurt a. M.: Suhrkamp} which compare outputs to
+  real-world results.
+\end{itemize}
+
+There are also a variety of approaches to representing existing
+scientific knowledge in machine learning models, notably by specifying
+the assumptions made about the world through symmetries, invariances,
+and physical laws (see Figure 1).
+
+\textbf{Box 3: Talks given during this workshop session}
+
+\emph{\textbf{Bernhard Schölkopf: Causality, causal digital twins, and
+their applications}}
+
+1.Desiderata for causal machine learning: work with (and benefit from)
+non-IID data, multi-task/multi-environment, sample-efficient, OOD,
+generalisation from observation of marginals, interventional.
+
+2.Modelling taxonomy: differential equations, causal models, statistical
+models.
+
+3.How to get from one level to the next.
+
+4.How to transfer between statistical models that share the same
+underlying causal model.~
+
+5.The assumption of independent causal mechanisms (ICM) (for example,
+invariance/autonomy) and sparse mechanism design.~
+
+6.How to derive the arrow of time from ICM and algorithmic information
+theory.
+
+7.Statistical formulation of ICM: causal de Finetti.
+
+8.Application to exoplanet discovery and Covid-19 vaccine scenarios.
+
+9.Causal representations as (a) causal digital twins and (b) AI models.
+
+\emph{\textbf{Jonas Peters: Invariance: From Causality to Distribution
+Generalization}}
+
+Assume that we observe data from a response Y and a set of covariates X
+under different experimental conditions (or environments). Rather than
+focusing on the model that is most predictive, it has been suggested to
+take into account the invariance of a model. This can help us to infer
+causal structure (Which covariates are causes of Y?) and find models
+that generalize better (How well does the model perform on an unseen
+environment?). We show a few applications of these general principles
+and discuss first steps towards understanding the corresponding
+theoretical guarantees and limits.
+
+\emph{\textbf{Niki Kilbertus: Can we discover dynamical laws from
+observation?~}}
+
+I will start with a brief introduction to identifiability of ODE systems
+from a unique continuous or discrete observed solution trajectory. Then,
+I will provide an overview of modern approaches to inferring dynamical
+laws (in the form of ODEs) from observational data with a particular
+focus on interpretability and symbolic methods. Finally, I will describe
+our recent attempts and results at inferring scalar ODEs in symbolic
+form from a single irregularly sampled, noisy solution trajectory.
+
+\emph{\textbf{Soledad Villar: Invariances and equivariances in machine
+learning}}
+
+In this talk, we give an overview of the progress in the last few years
+by several research groups in designing machine learning methods that
+repeat physical laws. Some of these frameworks make use of irreducible
+representations, some make use of high-order tensor objects, and some
+apply symmetry enforcing constraints. Our work shows that it is simple
+to parameterise universally approximating functions that are equivariant
+under actions of the Euclidean, Lorentz, and Poincare group at any
+dimensionality. The key observation is that O(d)-equivariant (and
+related group-equivariant) functions can be universally expressed in
+terms of a lightweight collection of dimensionless scalars (scalar
+products and scalar contractions of the scalar, vector, and tensor
+inputs). We complement our theory with numerical examples that show that
+the scalar-based method is simple and efficient, and mention ongoing
+work on cosmology simulations.~
+
+\emph{\textbf{Bubacarr Bah: Divide-and-Conquer Equation Learning with R2
+and Bayesian Model Evidence}}
+
+Deep learning is a powerful method for tasks like predictions and
+classification, but lacks interpretability and analytic access. Instead
+of fitting up to millions of parameters, an intriguing alternative for a
+wide range of problems would be to learn the governing equations from
+data. Resulting models would be concise, parameters can be interpreted,
+the model can adjust to shifts in data, and analytic analysis allows for
+extra insights. Common challenges are model complexity identification,
+stable feature selection, expressivity, computational feasibility, and
+scarce data. In our work, the mentioned challenges are addressed by
+combining existing methods in a novel way. We choose multiple regression
+as a framework and argue how a surprisingly large space of model
+equations can be captured. For feature selection, we exploit the
+computationally cheap coefficient of determination
+(R\textsuperscript{2}) to loop through millions of models, and by using
+a divide-and-conquer strategy, we are able to rule out remaining models
+in the equation class. Final model selection is achieved by exact values
+of the Bayesian model evidence with empirical priors, which is known to
+identify suitable model complexity without relying on mass data. Random
+polynomials, and a couple of chaotic systems are used as examples.
