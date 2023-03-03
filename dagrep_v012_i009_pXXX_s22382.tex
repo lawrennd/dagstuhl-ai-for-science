@@ -1,0 +1,220 @@
+\documentclass[a4paper,UKenglish]{dagrep-v2021}
+
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+
+\bibliographystyle{plain}
+
+\iffalse
+\usepackage{draftwatermark} % option '[nostamp]' to ignore watermark
+\SetWatermarkFontSize{5cm}
+\SetWatermarkScale{0.5}
+\SetWatermarkLightness{0.8}
+\SetWatermarkColor[rgb]{0.95,0.4,0.1}
+\SetWatermarkText{\shortstack[l]{\vspace*{3cm}\ \textsf{DRAFT 2023-01-09}}}
+\fi
+
+\subject{Report from Dagstuhl Seminar 22382}
+\title{Machine Learning for Science: Bridging Data-Driven and Mechanistic Modelling}
+\titlerunning{22382 -- Machine Learning for Science: Bridging Data-Driven and Mechanistic Modelling}
+
+\author[1]{Philipp Berens}
+\author[2]{Kyle Cranmer}
+\author[3]{Neil D. Lawrence}
+\author[4]{Ulrike von Luxburg}
+\author[5]{Jessica Montgomery}
+\authorrunning{Philipp Berens, Kyle Cranmer, Neil D. Lawrence, Ulrike von Luxburg, and Jessica Montgomery}
+\affil[1]{Universität Tübingen, DE, \texttt{philipp.berens@uni-tuebingen.de}}
+\affil[2]{University of Wisconsin - Madison, US, \texttt{kyle.cranmer@nyu.edu}}
+\affil[3]{University of Cambridge, GB, \texttt{ndl21@cam.ac.uk}}
+\affil[4]{Universität Tübingen, DE, \texttt{luxburg@informatik.uni-tuebingen.de}}
+\affil[5]{University of Cambridge, GB, \texttt{jkm40@cam.ac.uk}}
+
+\seminarnumber{22382}
+\semdata{September 18--23, 2022 -- \href{http://www.dagstuhl.de/22382}{http://www.dagstuhl.de/22382}}
+\additionaleditors{Montgomery, Jessica}
+
+\volumeinfo%(easychair interface)
+  {Philipp Berens, Kyle Cranmer, Neil D. Lawrence, Ulrike von Luxburg, and Jessica Montgomery}%editor names
+  {5}%number of editors
+  {Machine Learning for Science: Bridging Data-Driven and Mechanistic Modelling}%seminar title
+  {12}%volume
+  {09}%issue
+  {1}%starting page number
+\DOI{10.4230/DagRep.12.9.1}%(DagRep.<volume no>.<issue no>.<firstpage>)
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report documents the program and the outcomes of Dagstuhl Seminar 22382 "Machine Learning for Science: Bridging Data-Driven and Mechanistic Modelling". For a real abstract, one should write a little bit more here.
+\end{abstract}
+
+\tableofcontents
+
+% Overview of Talks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Overview of Talks}
+
+\abstracttitle{Divide-and-Conquer Equation Learning with R2 and Bayesian Model Evidence}
+\abstractauthor[Bubacarr Bah]{Bubacarr Bah (AIMS South Africa - Cape Town, ZA)}
+\license
+
+Deep learning is a powerful method for tasks like predictions and classification, but lacks interpretability and analytic access. Instead of fitting up to millions of parameters, an intriguing alternative for a wide range of problems would be to learn the governing equations from data. Resulting models would be concise, parameters can be interpreted, the model can adjust to shifts in data, and analytic analysis allows for extra insights. Common challenges are model complexity identification, stable feature selection, expressivity, computational feasibility, and scarce data. In our work, the mentioned challenges are addressed by combining existing methods in a novel way. We choose multiple regression as a framework and argue how a surprisingly large space of model equations can be captured. For feature selection, we exploit the computationally cheap coefficient of determination (R2) to loop through millions of models, and by using a divide-and-conquer strategy, we are able to rule out remaining models in the equation class. Final model selection is achieved by exact values of the Bayesian model evidence with empirical priors, which is known to identify suitable model complexity without relying on mass data. Random polynomials, and a couple of chaotic systems are used as examples.
+ 
+
+\abstracttitle{Single-cell transcriptomics}
+\abstractauthor[Maren BÃ¼ttner]{Maren BÃ¼ttner (Helmholtz Zentrum München \& Universität Bonn)}
+\license
+
+Cells are the fundamental units of life. Understanding cellular processes is a basis for improving human health, disease diagnosis and monitoring. The advent of single-cell transcriptomics (scRNA-seq) allows characterizing the gene expression patterns of entire organs and organisms at single cell resolution. The human genome encodes more than 30.000 genes, and high-throughput scRNA-seq methods create samples with tens of thousands of cell measurements. The analysis of such data requires a variety of methods from the machine learning field, e.g. dimensionality reduction techniques from PCA to variational autoencoders, graph-based clustering, classification of cell types, trajectory inference and causal inference of gene regulation to understand cell fate decision making. To date, scRNA-seq is a widely applied research technique, which has the potential for standard application in the clinics.  My presentation focusses on current approaches for large-scale scRNA-seq data, current open questions, and implications for human health.
+
+\abstracttitle{Modeling the data collection process: My journey}
+\abstractauthor[Thomas G. Dietterich]{Thomas G. Dietterich (Oregon State University - Corvallis, US)}
+\license
+
+In this talk, I will describe three examples of my attempts to integrate subject-matter knowledge with machine learning. The first example involves predicting grasshopper infestations. I will sketch the methodology in which we first modeled the life cycle of the grasshoppers to capture the factors that affect their population. Unfortunately, most variables of interest were not measured, so we used the model to guide the construction of proxy variables. Ultimately, this project did not succeed, but it is hard to determine whether this is due to modeling problems or to the chaotic nature of the biological phenomenon.
+
+\abstracttitle{Translating mechanistic understandings to stochastic models}
+\abstractauthor[Carl Henrik Ek]{Carl Henrik Ek (University of Cambridge, GB)}
+\license
+
+Statistical learning holds the promise of being the glue that allows us to improve knowledge parametrised explicitly by a mechanistic model with implicit knowledge through empirical evidence. Statistical inference provides a narrative of how to integrate these two sources of information leading to an explanation of the empirical evidence in "light" of the explicit knowledge. While the two sources of knowledge are exchangeable in terms of predictive performance they are not if our focus is that of statistical learning as a tool for science where we want to derive new knowledge.
+
+In this talk we will focus on challenges associated with translating our mechanistic understanding into stochastic models such that they can be integrated with data. In particular, we will focus on the challenges of translating composite knowledge. We will show how these structures and the computational intractabilities they lead to make knowledge discovery challenging. 
+
+The perceived "success" of machine learning comes from application where we have large volumes of data such that only simple and generic models are needed in order to regularise the problem. This means that much of the progress that have been made with predictive models are challenging to translate into useful mechanisms for scientific applications. In this talk we will focus on challenges associated with translating our mechanistic understanding into stochastic models such that they can be integrated with data. In specific we will focus on the challenges of translating composite knowledge. We will show how these structures and the computational intractabilities they lead to makes knowledge discovery challenging. We will discuss properties that we desire from such structures and highlight the large gap that exists with current inference mechanism.
+
+\abstracttitle{Information from data and compute in scientific inference}
+\abstractauthor[Philipp Hennig]{Philipp Hennig (Universität Tübingen, DE)}
+\license
+
+Simulations are central to scientific inference. Simulators are typically treated as black boxes, with the inference loop wrapped around them. This approach is convenient for the programming scientists, but can be highly inefficient. Probabilistic numerical methods represent computational and empirical data in the same language, which allows for inference from mechanistic knowledge and empirical data in one combined step. I will argue that scientific computing needs to embrace such new computational paradigms to truly leverage ML in science, which also requires rethinking scientific codebases.
+
+\abstracttitle{Making data analysis more like classical physics}
+\abstractauthor[David W. Hogg]{David W. Hogg (New York University, US)}
+\license
+
+The laws of physics are very structured: They involve coordinate-free forms, they are equivariant to a panoply of group actions, and they can be written entirely in terms of dimensionless, invariant quantities. We find that many existing machine-learning methods can be very straightforwardly modified to obey the rules that physical law must obey; physics structure can be implemented without big engineering efforts. We also find that these modifications often lead to improvements in generalization, including out-of-sample generalization, in natural-science contexts. We have some intuitions about why.
+
+\abstracttitle{Estimating ecosystem properties: Combining machine learning and mechanistic models}
+\abstractauthor[Christian Igel]{Christian Igel (University of Copenhagen, DK)}
+\license
+\jointwork{artin Brandt, Rasmus Fensholt, Compton J. Tucker, Ankit Kariryaa, Kjeld Rasmussen, Christin Abel, Jennifer Small, Jerome Chave, Laura Vang Rasmussen, Pierre Hiernaux, Abdoul Aziz Diouf, Laurent Kergoat, Ole Mertz, Fabian Gieseke, Sizhuo Li, Katherine Melo}
+\abstractref[https://doi.org/10.1038/s41586-020-2824-5]{Brandt, M., Tucker, C.J., Kariryaa, A. et al. An unexpectedly large count of trees in the West African Sahara and Sahel. Nature 587, 78–82 (2020).}
+\abstractrefurl{https://doi.org/10.1038/s41586-020-2824-5}
+
+Progress in remote sensing technology and machine learning algorithms enables scaling up the monitoring of ecosystems. This leads to new knowledge about their status and dynamics, which will be helpful in land degradation assessment (e.g., deforestation), in mitigating poverty (e.g., food security, agroforestry, wood products), and in managing climate change (e.g., carbon sequestration).
+
+We apply deep learning for the mapping of individual trees and forests. Tree crowns are segmented in satellite imagery using fully convolutional neural networks. This provides detailed measurements of the canopy area and of the distribution of trees within and outside forests. Allometric equations are applied to estimate the biomasses (and thereby the stored carbon) of the individual trees. We use iterative gradient-based optimization of the allometric models and suggest techniques such as  jackknife+ for quantifying the uncertainty of the model predictions. Tree biomass can also be directly inferred from LiDAR (laser imaging, detection, and ranging) measurements using 3D point cloud neural networks. This leads to highly accurate results without requiring a digital elevation model. 
+
+In a new project, we consider risk assessment of vector-borne diseases based on deep learning and remote sensing. Malaria risk is related to the housing conditions, for example, the type of roofing material, which can be determined from satellite images.
+
+\abstracttitle{Virtual laboratories for science, assisted by collaborative AI}
+\abstractauthor[Samuel Kaski]{Samuel Kaski (Aalto University, FI)}
+\license
+
+I introduced two ideas: virtual laboratories for science, aiming to introduce an interface between algorithms and domain science that enables AI-driven scale advantages, and AI-based ‘sidekick’ assistants, able to help other agents research their goals, even when they are not able to yet specify the goal explicitly, or it is evolving. Such assistants would ultimately be able to help human domain experts run experiments in the virtual laboratories. I invited researchers to join the virtual laboratory movement, both domain scientists in hosting a virtual laboratory in their field and methods researchers in contributing new methods to virtual laboratories, simply by providing compatible interfaces in their code. For developing the assistants, I introduced the basic problem of agents that are able to help other agents reach their goals, also in zero-short settings, formulated the problem, and introduced solutions in the simplified setting of prior knowledge elicitation, and in AI-assistted decision and design tasks.
+
+\abstracttitle{Partial differential equations and Variational Bayes}
+\abstractauthor[Ieva Kazlauskaite]{Ieva Kazlauskaite (University of Cambridge, GB)}
+\license
+
+Inverse problems involving partial differential equations (PDEs) are widely used in science and engineering. Although such problems are generally ill-posed, different regularisation approaches have been developed to ameliorate this problem. Among them is the Bayesian formulation, where a prior probability measure is placed on the quantity of interest. The resulting posterior probability measure is usually analytically intractable. The Markov Chain Monte Carlo (MCMC) method has been the go-to method for sampling from those posterior measures. MCMC is computationally infeasible for large-scale problems that arise in engineering practice. Lately, Variational Bayes (VB) has been recognised as a more computationally tractable method for Bayesian inference, approximating a Bayesian posterior distribution with a simpler trial distribution by solving an optimisation problem. The talk covered some recent experiences of applying Bayesian inference, generative models and probabilistic programming languages in the context of learning material properties in civil engineering and in ice sheet and ice core modelling. The main shortcomings of PPLs and differentiable problems were highlighted.
+
+\abstracttitle{ODE filters and smoothers: probabilistic numerics for mechanistic modelling}
+\abstractauthor[Hans Kersting]{Hans Kersting (INRIA - Paris, FR)}
+\license
+
+Probabilistic numerics (PN) unifies statistical and numerical approximations by formulating them in the same language of statistical (Bayesian) inference. For ODEs, a well-established probabilistic numerical method is ODE filters and smoothers which can help to deal more aptly with uncertainty in mechanistic modeling. In the first half of this talk, we will first introduce PN and then present ODE filters/smoothers as a specific instance of PN. In the second half, we will discuss how ODE filters/smoothers can improve mechanistic modeling in the natural sciences and present a recent application of inferring the parameters of real-word dynamical system.
+
+\abstracttitle{Can we discover dynamical laws from observation?}
+\abstractauthor[Niki Kilbertus]{Niki Kilbertus (TU München, DE \& Helmholtz AI München, DE)}
+\license
+
+I will start with a brief introduction to identifiability of ODE systems from a unique continuous or discrete observed solution trajectory. Then, I will provide an overview of modern approaches to inferring dynamical laws (in the form of ODEs) from observational data with a particular focus on interpretability and symbolic methods. Finally, I will describe our recent attempts and results at inferring scalar ODEs in symbolic form from a single irregularly sampled, noisy solution trajectory.
+
+\abstracttitle{Towards reliable simulation-based inference and beyond}
+\abstractauthor[Gilles Louppe]{Gilles Louppe (University of Liège, BE)}
+\license
+
+Modern approaches for simulation-based inference build upon deep learning surrogates to enable approximate Bayesian inference with computer simulators. In practice, the estimated posteriors' computational faithfulness is, however, rarely guaranteed. For example, Hermans et al., 2021 have shown that current simulation-based inference algorithms can produce posteriors that are overconfident, hence risking false inferences. In this talk, we will review the main inference algorithms and present Balanced Neural Ratio Estimation (BNRE), a variation of the NRE algorithm designed to produce posterior approximations that tend to be more conservative, hence improving their reliability.
+
+\abstracttitle{Poultry Diseases Diagnostics Models using Deep Learning}
+\abstractauthor[Dina Machuve]{Dina Machuve (DevData Analytics - A, TZ)}
+\license
+
+Coccidiosis, Salmonella, and Newcastle are the common poultry diseases that curtail poultry production if they are not detected early. In Tanzania, these diseases are not detected early due to limited access to agricultural support services by poultry farmers. Deep learning techniques have the potential for early diagnosis of these poultry diseases. In this study, a deep Convolutional Neural Network (CNN) model was developed to diagnose poultry diseases by classifying healthy and unhealthy fecal images. Unhealthy fecal images may be symptomatic of Coccidiosis, Salmonella, and Newcastle diseases. We collected 1,255 laboratory-labeled fecal images and fecal samples used in Polymerase Chain Reaction diagnostics to annotate the laboratory-labeled fecal images. We took 6,812 poultry fecal photos using an Open Data Kit. Agricultural support experts annotated the farm-labeled fecal images. Then we used a baseline CNN model, VGG16, InceptionV3, MobileNetV2, and Xception models. We trained models using farm and laboratory-labeled fecal images and then fine-tuned them. The test set used farm-labeled images. The test accuracies results without fine-tuning were 83.06% for the baseline CNN, 85.85% for VGG16, 94.79% for InceptionV3, 87.46% for MobileNetV2, and 88.27% for Xception. Finetuning while freezing the batch normalization layer improved model accuracies, resulting in 95.01% for VGG16, 95.45% for InceptionV3, 98.02% for MobileNetV2, and 98.24% for Xception, with F1 scores for all classifiers above 75% in all four classes. Given the lighter weight of the trained MobileNetV2 and its better ability to generalize, we recommend deploying this model for the early detection of poultry diseases at the farm level. There are open questions about the deployment of the model at the farm level and potential areas for further research.
+
+\abstracttitle{Four short stories on simulation-based inference}
+\abstractauthor[Jakob Macke]{Jakob Macke (Universität Tübingen, DE)}
+\license
+
+Many fields of science make extensive use of simulations expressing mechanistic forward models, requiring the use of simulation-based inference methods. I will share experiences and lessons learned from four applications: Describing the dynamics and energy consumptions of neural networks in the stomatogastric ganglion; inferring parameters of gravitational wave models; optimising single-molecule localisation microscopy, and building computational models of the fly visual system. I will try to convey some thoughts on the challenges and shortcomings of current approaches.
+
+\abstracttitle{Simulation-based approaches to astrophysics dark matter searches}
+\abstractauthor[Siddharth Mishra-Sharma]{Siddharth Mishra-Sharma (MIT - Cambridge, US)}
+\license
+
+We are at the dawn of a data-rich era in astrophysics and cosmology, with the capacity to extract useful scientific insights often limited by our ability to efficiently model complex processes that give rise to the data rather than the volume and nature of observations itself. I will describe recent progress in applying mechanistic forward modeling techniques to a range of astrophysical observations with the goal of searching for signatures of new physics, in particular the nature of dark matter. These leverage developments in machine learning-aided inference, e.g. using simulation-based inference as well as differentiable probabilistic programming, while encoding domain knowledge, in order to maximize the scientific output of current as well as future experiments.
+
+\abstracttitle{Invariance: From Causality to Distribution Generalization}
+\abstractauthor[Jonas Peters]{Jonas Peters (University of Copenhagen, DK)}
+\license
+
+Assume that we observe data from a response Y and a set of covariates X under different experimental conditions (or environments). Rather than focusing on the model that is most predictive, it has been suggested to take into account the invariance of a model. This can help us to infer causal structure (Which covariates are causes of Y?) and find models that generalize better (How well does the model perform on an unseen environment?). We show a few applications of these general principles and discuss first steps towards understanding the corresponding theoretical guarantees and limits.
+
+\abstracttitle{Machine-learning-model-data-integration for a better understanding of the Earth System}
+\abstractauthor[Markus Reichstein]{Markus Reichstein (MPI für Biogeochemistry - Jena, DE)}
+\license
+
+The Earth is a complex dynamic networked system. Machine learning, i.e. derivation of computational models from data, has already made important contributions to predict and understand components of the Earth system, specifically in climate, remote sensing and environmental sciences. For instance, classifications of land cover types, prediction of land-atmosphere and ocean-atmosphere exchange, or detection of extreme events have greatly benefited from these approaches. Such data-driven information has already changed how Earth system models are evaluated and further developed. However, many studies have not yet sufficiently addressed and exploited dynamic aspects of systems, such as memory effects for prediction and effects of spatial context, e.g. for classification and change detection. In particular new developments in deep learning offer great potential to overcome these limitations. Yet, a key challenge and opportunity is to integrate (physical-biological) system modelling approaches with machine learning into hybrid modelling approaches, which combines physical consistency and machine learning versatility. A couple of examples are given with focus on the terrestrial biosphere, where the combination of system-based and machine-learning-based modelling helps our understanding of aspects of the Earth system.
+
+\abstracttitle{Causality, causal digital twins, and their applications}
+\abstractauthor[Bernhard SchÃ¶lkopf]{Bernhard SchÃ¶lkopf (MPI für Intelligente Systeme - Tübingen, DE)}
+\license
+
+1.	Desiderata for causal machine learning: work with (and benefit from) non-IID data, multi-task/multi-environment, sample-efficient, OOD, generalisation from observation of marginals, interventional.
+2.	Modelling taxonomy: differential equations, causal models, statistical models.
+3.	How to get from one level to the next.
+4.	How to transfer between statistical models that share the same underlying causal model. 
+5.	The assumption of independent causal mechanisms (ICM) (for example, invariance/autonomy) and sparse mechanism design. 
+6.	How to derive the arrow of time from ICM and algorithmic information theory.
+7.	Statistical formulation of ICM: causal de Finetti.
+8.	Application to exoplanet discovery and Covid-19 vaccine scenarios.
+9.	Causal representations as (a) causal digital twins and (b) AI models.
+
+\abstracttitle{The Schrödinger bridge problem}
+\abstractauthor[Francisco Vargas]{Francisco Vargas (University of Cambridge, GB)}
+\license
+
+Recent works in diffusion-based models have been achieving competitive results across generative modelling and inference, in this presentation we propose to explore a unifying framework based on Schrodinger bridges to explore/explain diffusion-based methodology. The Schrödinger bridge problem (SBP) finds the most likely stochastic evolution between two probability distributions given a prior (reference) stochastic evolution. Recently SBP based methodology has made its way into generative modelling , sampling, and inference. In this talk we propose the exploration of a unifying framework for the aforementioned works based on the renowned IPF/Sinkhorn algorithm. The motivation behind this is to cast a unifying lens via the Schrodinger perspective relating inference, sampling and transport, in a way that we can leverage many of the useful techniques and heuristics from each field to benefit each other.
+
+\abstracttitle{Invariances and equivariances in machine learning}
+\abstractauthor[Soledad Villar]{Soledad Villar (Johns Hopkins University - Baltimore, US)}
+\license
+
+In this talk, we give an overview of the progress in the last few years by several research groups in designing machine learning methods that repeat physical laws. Some of these frameworks make use of irreducible representations, some make use of high-order tensor objects, and some apply symmetry enforcing constraints. Our work shows that it is simple to parameterise universally approximating functions that are equivariant under actions of the Euclidean, Lorentz, and Poincare group at any dimensionality. The key observation is that O(d)-equivariant (and related group-equivariant) functions can be universally expressed in terms of a lightweight collection of dimensionless scalars (scalar products and scalar contractions of the scarla, vector, and tensor inputs). We complement our theory with numerical examples that show that the scalar-based method is simple and efficient, and mention ongoing work on cosmology simulations.
+
+\abstracttitle{Latent force models}
+\abstractauthor[Mauricio A Ãlvarez]{Mauricio A Ãlvarez (University of Manchester, GB)}
+\license
+
+A latent force model is a Gaussian process with a covariance function inspired by a differential operator. Such a covariance function is obtained by performing convolution integrals between Green's functions associated with the differential operators, and covariance functions associated with latent functions. Latent force models have been used in several different fields for grey box modelling and Bayesian inversion. In this talk, I will introduce latent force models and several recent works in my group where we have extended this framework to non-linear problems.
+
+%\newpage
+
+% Working groups %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Working groups}
+
+% Panel discussions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Panel discussions}
+
+% Open problems %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Open problems}
+
+\end{document}
