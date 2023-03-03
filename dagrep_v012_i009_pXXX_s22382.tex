@@ -53,12 +53,16 @@
 
 \tableofcontents
 
-% Overview of Talks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{introduction--bridging-data-driven-and-mechanistic-modelling}
 
+\include{introduction-bridging-data-driven-and-mechanistic-modelling}
 \include{snapshots-of-ai-in-science}
-\include{directions}
+\include{building-effective-simulations}
+\include{connecting-data-and-causality}
+\include{encoding-domain-knowledge}
+
 \section{Overview of Talks}
+
+% Overview of Talks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \abstracttitle{Divide-and-Conquer Equation Learning with R2 and Bayesian Model Evidence}
 \abstractauthor[Bubacarr Bah]{Bubacarr Bah (AIMS South Africa - Cape Town, ZA)}
@@ -68,7 +72,7 @@ Deep learning is a powerful method for tasks like predictions and classification
  
 
 \abstracttitle{Single-cell transcriptomics}
-\abstractauthor[Maren BÃ¼ttner]{Maren BÃ¼ttner (Helmholtz Zentrum München \& Universität Bonn)}
+\abstractauthor[Maren B\"uttner]{Maren B\"uttner (Helmholtz Zentrum München \& Universität Bonn)}
 \license
 
 Cells are the fundamental units of life. Understanding cellular processes is a basis for improving human health, disease diagnosis and monitoring. The advent of single-cell transcriptomics (scRNA-seq) allows characterizing the gene expression patterns of entire organs and organisms at single cell resolution. The human genome encodes more than 30.000 genes, and high-throughput scRNA-seq methods create samples with tens of thousands of cell measurements. The analysis of such data requires a variety of methods from the machine learning field, e.g. dimensionality reduction techniques from PCA to variational autoencoders, graph-based clustering, classification of cell types, trajectory inference and causal inference of gene regulation to understand cell fate decision making. To date, scRNA-seq is a widely applied research technique, which has the potential for standard application in the clinics.  My presentation focusses on current approaches for large-scale scRNA-seq data, current open questions, and implications for human health.
@@ -219,5 +223,10 @@ A latent force model is a Gaussian process with a covariance function inspired b
 % Open problems %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\section{Open problems}
+
+\renewcommand{appendixname}{Annex}
+\appendix
+\include{participants}
+\include{research-questions}
 
 \end{document}
