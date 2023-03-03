@@ -48,15 +48,16 @@
 \maketitle
 
 \begin{abstract}
-\include{summary.tex}
+\include{summary}
 \end{abstract}
 
 \tableofcontents
 
 % Overview of Talks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{summary}
-\include{snapshots-of-ai-in-science}
+\include{introduction--bridging-data-driven-and-mechanistic-modelling}
 
+\include{snapshots-of-ai-in-science}
+\include{directions}
 \section{Overview of Talks}
 
 \abstracttitle{Divide-and-Conquer Equation Learning with R2 and Bayesian Model Evidence}
@@ -147,7 +148,7 @@ Modern approaches for simulation-based inference build upon deep learning surrog
 \abstractauthor[Dina Machuve]{Dina Machuve (DevData Analytics - A, TZ)}
 \license
 
-Coccidiosis, Salmonella, and Newcastle are the common poultry diseases that curtail poultry production if they are not detected early. In Tanzania, these diseases are not detected early due to limited access to agricultural support services by poultry farmers. Deep learning techniques have the potential for early diagnosis of these poultry diseases. In this study, a deep Convolutional Neural Network (CNN) model was developed to diagnose poultry diseases by classifying healthy and unhealthy fecal images. Unhealthy fecal images may be symptomatic of Coccidiosis, Salmonella, and Newcastle diseases. We collected 1,255 laboratory-labeled fecal images and fecal samples used in Polymerase Chain Reaction diagnostics to annotate the laboratory-labeled fecal images. We took 6,812 poultry fecal photos using an Open Data Kit. Agricultural support experts annotated the farm-labeled fecal images. Then we used a baseline CNN model, VGG16, InceptionV3, MobileNetV2, and Xception models. We trained models using farm and laboratory-labeled fecal images and then fine-tuned them. The test set used farm-labeled images. The test accuracies results without fine-tuning were 83.06% for the baseline CNN, 85.85% for VGG16, 94.79% for InceptionV3, 87.46% for MobileNetV2, and 88.27% for Xception. Finetuning while freezing the batch normalization layer improved model accuracies, resulting in 95.01% for VGG16, 95.45% for InceptionV3, 98.02% for MobileNetV2, and 98.24% for Xception, with F1 scores for all classifiers above 75% in all four classes. Given the lighter weight of the trained MobileNetV2 and its better ability to generalize, we recommend deploying this model for the early detection of poultry diseases at the farm level. There are open questions about the deployment of the model at the farm level and potential areas for further research.
+Coccidiosis, Salmonella, and Newcastle are the common poultry diseases that curtail poultry production if they are not detected early. In Tanzania, these diseases are not detected early due to limited access to agricultural support services by poultry farmers. Deep learning techniques have the potential for early diagnosis of these poultry diseases. In this study, a deep Convolutional Neural Network (CNN) model was developed to diagnose poultry diseases by classifying healthy and unhealthy fecal images. Unhealthy fecal images may be symptomatic of Coccidiosis, Salmonella, and Newcastle diseases. We collected 1,255 laboratory-labeled fecal images and fecal samples used in Polymerase Chain Reaction diagnostics to annotate the laboratory-labeled fecal images. We took 6,812 poultry fecal photos using an Open Data Kit. Agricultural support experts annotated the farm-labeled fecal images. Then we used a baseline CNN model, VGG16, InceptionV3, MobileNetV2, and Xception models. We trained models using farm and laboratory-labeled fecal images and then fine-tuned them. The test set used farm-labeled images. The test accuracies results without fine-tuning were 83.06\% for the baseline CNN, 85.85\% for VGG16, 94.79\% for InceptionV3, 87.46\% for MobileNetV2, and 88.27\% for Xception. Finetuning while freezing the batch normalization layer improved model accuracies, resulting in 95.01\% for VGG16, 95.45\% for InceptionV3, 98.02\% for MobileNetV2, and 98.24\% for Xception, with F1 scores for all classifiers above 75\% in all four classes. Given the lighter weight of the trained MobileNetV2 and its better ability to generalize, we recommend deploying this model for the early detection of poultry diseases at the farm level. There are open questions about the deployment of the model at the farm level and potential areas for further research.
 
 \abstracttitle{Four short stories on simulation-based inference}
 \abstractauthor[Jakob Macke]{Jakob Macke (Universität Tübingen, DE)}
@@ -174,7 +175,7 @@ Assume that we observe data from a response Y and a set of covariates X under di
 The Earth is a complex dynamic networked system. Machine learning, i.e. derivation of computational models from data, has already made important contributions to predict and understand components of the Earth system, specifically in climate, remote sensing and environmental sciences. For instance, classifications of land cover types, prediction of land-atmosphere and ocean-atmosphere exchange, or detection of extreme events have greatly benefited from these approaches. Such data-driven information has already changed how Earth system models are evaluated and further developed. However, many studies have not yet sufficiently addressed and exploited dynamic aspects of systems, such as memory effects for prediction and effects of spatial context, e.g. for classification and change detection. In particular new developments in deep learning offer great potential to overcome these limitations. Yet, a key challenge and opportunity is to integrate (physical-biological) system modelling approaches with machine learning into hybrid modelling approaches, which combines physical consistency and machine learning versatility. A couple of examples are given with focus on the terrestrial biosphere, where the combination of system-based and machine-learning-based modelling helps our understanding of aspects of the Earth system.
 
 \abstracttitle{Causality, causal digital twins, and their applications}
-\abstractauthor[Bernhard SchÃ¶lkopf]{Bernhard SchÃ¶lkopf (MPI für Intelligente Systeme - Tübingen, DE)}
+\abstractauthor[Bernhard Sch\"olkopf]{Bernhard Sch\"olkopf (MPI für Intelligente Systeme - Tübingen, DE)}
 \license
 
 1.	Desiderata for causal machine learning: work with (and benefit from) non-IID data, multi-task/multi-environment, sample-efficient, OOD, generalisation from observation of marginals, interventional.
