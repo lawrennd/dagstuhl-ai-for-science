@@ -11,18 +11,18 @@ future are aspirations that AI can be a faithful servant, easing daily
 activities or enhancing human activities.\footnote{The Royal Society
   (2018) AI narratives: portrayals and perceptions of artificial
   intelligence and why they matter, available at:
-  \href{https://royalsociety.org/topics-policy/projects/ai-narratives/}{\uline{https://royalsociety.org/topics-policy/projects/ai-narratives/}}}
+  \href{https://royalsociety.org/topics-policy/projects/ai-narratives/}}
 As with many emerging technologies, the reality of AI today looks
 different to these Sci-Fi futures.\footnote{The title of this section is
   inspired by:
-  \href{https://www.fantasticfiction.com/w/daniel-h-wilson/where-s-my-jetpack.htm}{\uline{https://www.fantasticfiction.com/w/daniel-h-wilson/where-s-my-jetpack.htm}}}
+  \href{https://www.fantasticfiction.com/w/daniel-h-wilson/where-s-my-jetpack.htm}}
 Practical experiences of deploying AI highlights a range of potential
 failure modes, often rooted in insufficient contextual awareness,
 misspecification of user needs, or misunderstanding of environmental
 dynamics.\footnote{Paleyes, A., Urma, R.G. and Lawrence, N.D. (2022)
   Challenges in Deploying Machine Learning: A Survey of Case Studies,
   ACM Computing Surveys,
-  \href{https://doi.org/10.1145/3533378}{\uline{https://doi.org/10.1145/3533378}}}
+  \href{https://doi.org/10.1145/3533378}}
 
 Today's science builds on thousands of years of attempts to understand
 the world, which can be leveraged to design AI that serves scientific
@@ -50,17 +50,17 @@ consistent, despite changes or transformations in a system.\footnote{Villar,
   S., Hogg, D.W., Storey-Fisher, K., Yao, W. and Blum-Smith, B. (2021)
   Scalars are universal: Equivariant machine learning, structured like
   classical physics, arXiv:2106.06610 {[}cs.LG{]},
-  \href{https://doi.org/10.48550/arXiv.2106.06610}{\uline{https://doi.org/10.48550/arXiv.2106.06610}}
+  \href{https://doi.org/10.48550/arXiv.2106.06610}
   and Villar, S., Yao, W., Hogg, D.W., Blum-Smith, B. and Dumitrascu, B.
   (2022) Dimensionless machine learning: Imposing exact units
   equivariance, arXiv:2204.00887 {[}stat.ML{]},
-  \href{https://doi.org/10.48550/arXiv.2204.00887}{\uline{https://doi.org/10.48550/arXiv.2204.00887}}}
+  \href{https://doi.org/10.48550/arXiv.2204.00887}}
 There may also be known invariances in a system: factors that do not
 change under any perturbations or that change in a defined
 way.\footnote{Ling, J., Jones, R. E., and Templeton, J.A. (2016) Machine
   learning strategies for systems with invariance properties. United
   States.
-  \href{https://doi.org/10.1016/j.jcp.2016.05.003}{\uline{https://doi.org/10.1016/j.jcp.2016.05.003}}}
+  \href{https://doi.org/10.1016/j.jcp.2016.05.003}}
 Building on this existing knowledge, and connecting to efforts to
 generate causal understandings of the world through machine learning, an
 area of growing interest has been the design of machine learning models
@@ -72,7 +72,10 @@ strongly mechanistic models, creating hybrid systems whose outputs
 should be constrained by what is physically feasible, while also
 leveraging insights from data (Figure 1).
 
+\begin{figure}
 \includegraphics[width=5.95833in,height=2.7581in]{media/image1.png}
+\caption{Models along a spectrum from classical i.i.d models to strongly mechanistic differential equation models introduce aspects of causality and symmetries to create a continuum between mechanistic and data-driven worlds. Statistical or data-driven models are weakly mechanistic (i.e. they include smoothness assumptions or similar).}
+\end{figure}
 
 At one end of that continuum, mechanistic models would obey known laws
 or principles in a strongly deterministic way; at the other, statistical
@@ -92,10 +95,12 @@ might be expected to produce more accurate results, with smaller
 generalisation errors, and with better out-of-distribution
 generalisation.
 
-\includegraphics[width=5.52778in,height=5.10021in]{./media/image2.png}
+\begin{figure}
+\includegraphics[width=5.52778in,height=5.10021in]{media/image2.png}
+\caption{Strategies for integrating domain insights: including information in data and including information as prior knowledge.}
+\end{figure}
 
-\hypertarget{scientific-centaurs}{%
-\subsection{Scientific centaurs}\label{scientific-centaurs}}
+\subsection{Scientific centaurs}\label{scientific-centaurs}
 
 Complementing modelling strategies to encode scientific knowledge are
 deployment strategies to use AI in the lab. The lab has long provided a
@@ -149,9 +154,8 @@ combine both human and machine intelligence.\footnote{Celikok, M.M.,
   \href{https://arxiv.org/abs/2204.01160}{\uline{arXiv:2204.01160}}\textbf{~}{[}cs.AI{]},
   \href{https://doi.org/10.48550/arXiv.2204.01160}{\uline{https://doi.org/10.48550/arXiv.2204.01160}}}
 
-\hypertarget{enabling-communication-across-domains}{%
 \subsection{Enabling communication across
-domains}\label{enabling-communication-across-domains}}
+domains}\label{enabling-communication-across-domains}
 
 Underpinning these efforts to integrate pre-existing knowledge into the
 design and deployment of AI systems is a feedback loop between domain
@@ -223,8 +227,7 @@ software packages play an important role in enabling communication and
 dissemination of methods for wider use.\footnote{See, for example:
   \href{https://lscsoft.docs.ligo.org/bilby/}{\uline{https://lscsoft.docs.ligo.org/bilby/}}}
 
-\hypertarget{directions-2}{%
-\subsection{Directions}\label{directions-2}}
+\subsection{Directions}\label{directions-2}
 
 New modelling approaches and mathematical innovations offer exciting
 opportunities to integrate domain knowledge, symmetries and invariances
