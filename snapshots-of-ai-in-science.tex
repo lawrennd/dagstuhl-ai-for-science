@@ -110,33 +110,20 @@ structure in the model helps make it both more interpretable to the
 domain scientists and more reliable in its predictions. The resulting
 model can accurately forecast the impact of climate change on the
 features of local landscapes, operating within the bounds set by the
-laws of physics.\footnote{Requena-Mesa, C., Reichstein, M., Mahecha, M.,
-  Kraft, B., Denzler, J. (2019). Predicting Landscapes from
-  Environmental Conditions Using Generative Networks. In: Fink, G.,
-  Frintrop, S., Jiang, X. (eds) Pattern Recognition. DAGM GCPR 2019.
-  Lecture Notes in Computer Science(), vol 11824. Springer, Cham.
-  https://doi.org/10.1007/978-3-030-33676-9\_14}
+laws of physics \citep{}.
 
 \textbf{Ice loss}\footnote{This example is inspired by Ieva
-  Kazlauskaitė's talk, the abstract for which is provided later in this
-  document.} has been the greatest contributor to sea-level rise in
-recent decades.\footnote{IPCC (2019) IPCC Special Report on the Ocean
-  and Cryosphere in a Changing Climate {[}H.-O. Pörtner, D.C. Roberts,
-  V. Masson-Delmotte, P. Zhai, M. Tignor, E. Poloczanska, K. Mintenbeck,
-  A. Alegría, M. Nicolai, A. Okem, J. Petzold, B. Rama, N.M. Weyer
-  (eds.){]}. Cambridge University Press, Cambridge, UK and New York, NY,
-  USA, pp. 3--35.
-  https://doi.org/10.1017/9781009157964.001.\href{https://www.ipcc.ch/srocc/}{\uline{https://www.ipcc.ch/srocc/}}}
-Large volumes of fresh water are stored as ice: NASA estimates that if
-all the world's glaciers and ice sheets melted, sea levels globally
-would rise by over 60 metres, flooding all coastal cities.\footnote{NASA,
-  Understanding sea level, available from:
-  \href{https://sealevel.nasa.gov/understanding-sea-level/global-sea-level/ice-melt}{\uline{https://sealevel.nasa.gov/understanding-sea-level/global-sea-level/ice-melt}}}
-Researchers can estimate the contribution that melting ice makes to sea
-level rise through mechanistic models that describe the underlying
-physical processes (that turn ice to water) and through observational
-data about the velocity of ice sheet movement. Machine learning could
-offer a toolkit to make these models more accurate, connecting ice sheet
+Kazlauskaitė's talk, the abstract for which is provided later in this
+document.} has been the greatest contributor to sea-level rise in
+recent decades \citep{Portner-ipcc19}. Large volumes of fresh water
+are stored as ice: NASA estimates that if all the world's glaciers and
+ice sheets melted, sea levels globally would rise by over 60 metres,
+flooding all coastal cities \citep{NASA-understanding}. Researchers
+can estimate the contribution that melting ice makes to sea level rise
+through mechanistic models that describe the underlying physical
+processes (that turn ice to water) and through observational data
+about the velocity of ice sheet movement. Machine learning could offer
+a toolkit to make these models more accurate, connecting ice sheet
 models to ocean and atmospheric models, and integrating different data
 types in hybrid mechanistic-data models.
 
@@ -179,18 +166,15 @@ Tanzania -- there are opportunities for new uses of local data to detect
 disease outbreaks.
 
 By collecting images of droppings from farms, researchers have been
-creating a dataset to train a machine learning system that can identify
-the symptoms of these diseases. Fecal images are taken on farms,
-annotated with diagnostic information from agricultural disease experts
-and the results of lab tests, then used to train an image recognition
-system to automate the diagnosis process.\footnote{Machuve D, Nwankwo E,
-  Mduma N, Mbelwa J. (2022) Poultry diseases diagnostics models using
-  deep learning. Front Artif Intell. 5, 733345. doi:
-  10.3389/frai.2022.733345. Erratum in: Front Artif Intell. 2022 Sep
-  01;5:1016695. PMID: 35978651; PMCID: PMC9376463.} System robustness
-and accuracy is vital, given the significant implications of a positive
-diagnosis, and careful design is necessary to incentivise farmers to
-make use of the app.
+creating a dataset to train a machine learning system that can
+identify the symptoms of these diseases. Fecal images are taken on
+farms, annotated with diagnostic information from agricultural disease
+experts and the results of lab tests, then used to train an image
+recognition system to automate the diagnosis process
+\citep{Machuve-poultry22}. System robustness and accuracy is vital,
+given the significant implications of a positive diagnosis, and
+careful design is necessary to incentivise farmers to make use of the
+app.
 
 Collaboration with experts from different domains is central to
 developing this system. Input from farmers is needed to collect data and
@@ -208,10 +192,7 @@ machine learning as a tool to serve their needs.
   this document.} play a crucial role in maintaining healthy ecosystems.
 Despite this, an estimated ten million hectares of forest are lost
 globally each year due to reforestation, with only around half of this
-balanced by tree-planting efforts.\footnote{Ritchie, H. and Roser, M.
-  (2021) - "Forests and Deforestation". Published online at
-  OurWorldInData.org,
-  https://ourworldindata.org/forests-and-deforestation} Africa
+balanced by tree-planting efforts \citep{Ritchie-forests21}. Africa
 experienced an annual rate of forest loss of approximately 3.9 million
 hectares per year from 2010-2020. This loss has implications for
 biodiversity and people, with trees a vital contributor to ecosystem
@@ -232,21 +213,13 @@ prediction is generated using allometric calculations, which translate
 the properties of the tree to its carbon storage potential. In this
 approach, machine learning measures the properties of the ecosystem from
 satellite images, then these properties are used to feed mechanistic
-models that describe the ecosystem's physical functions.\footnote{Brandt,
-  M., Tucker, C.J., Kariryaa, A. et al. (2020) An unexpectedly large
-  count of trees in the West African Sahara and Sahel. Nature 587,
-  78--82. https://doi.org/10.1038/s41586-020-2824-5} This opens the
+models that describe the ecosystem's physical functions \citep{Brandt-trees20}. This opens the
 possibility of new tools to estimate tree cover, leveraging these
 insights for more effective environmental management. However, in the
 process, care is needed to manage the type and nature of the
 uncertainties created by different modelling approaches. Different
 allometric models, for example, can be more or less suited to different
-types of tree cover,\footnote{Hiernaux, P. and Issoufou, B.H., Igel, C.,
-  Kariryaa, A., Kourouma, M., Chave, J., Mougin, E. and Savadogo, P.
-  (2023) Allometric Equations to Estimate the Dry Mass of Sahel Woody
-  Plants from Very-High Resolution Satellite Imagery. Forest Ecology and
-  Management, 529,
-  \href{https://doi.org/10.1016/j.foreco.2022.120653}{\uline{https://doi.org/10.1016/j.foreco.2022.120653}}}
+types of tree cover \citep{Hiernaux-allometric23},
 meaning that the method for estimating biomass from satellite imagery
 can be subject to biases when applied across a large area. A small error
 in the calculation of the biomass from one tree can have a cumulatively
@@ -257,10 +230,7 @@ learning model is used within a wider system.
 \textbf{Vector borne diseases}\footnote{This example is inspired by
   Christian Igel's talk, the abstract for which is provided later in
   this document.} account for more than 17\% of diseases in people and
-over 700,000 deaths annually.\footnote{Hernandez-Triana, L. and Bell, S.
-  (2022) Taking the sting out of vector borne diseases, APHA Science
-  Blog, available at:
-  \href{https://aphascience.blog.gov.uk/2022/07/06/vector-borne-diseases/}{\uline{https://aphascience.blog.gov.uk/2022/07/06/vector-borne-diseases/}}}
+over 700,000 deaths annually \citep{Hernandez-taking22}.
 Changes to the climate and patterns of land use, amongst other factors,
 are bringing human populations into contact with new vectors of disease.
 In Africa, for example, populations of mosquitoes carrying malaria that
@@ -268,11 +238,7 @@ might previously have been found mainly in rural areas are spreading
 into cities.
 
 Tools to characterise building features from satellite imagery have
-already been developed and made available for use.\footnote{For example:
-  Quinn, J. (2021) Mapping Africa's Buildings with Satellite Imagery,
-  Google Research Blog, available at:
-  \href{https://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html}{\uline{https://ai.googleblog.com/2021/07/mapping-africas-buildings-with.html}}}
-Leveraging these to analyse multi-scale data -- from household to
+already been developed and made available for use.\footnote{For example: \cite{Quinn-mapping21}.} Leveraging these to analyse multi-scale data -- from household to
 city-level -- researchers are investigating how the built environment
 influences people's risk of contracting mosquito-borne disease. For
 example, it has been found that the prevalence of mosquitos in an area
