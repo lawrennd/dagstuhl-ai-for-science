@@ -25,12 +25,7 @@ relationships in data -- has been a core aim of AI research, in service
 of both wider ambitions to replicate intelligence in machines and
 efforts to create AI systems that are robust in deployment. However, in
 many respects efforts to integrate causal inference into AI systems have
-yet to deliver \ci.\footnote{Schölkopf, B., Locatello, F., Bauer, S., Ke,
-  N.R., Kalchbrenner, N., Goyal, A., and Bengio, Y. (2021) Towards
-  Causal Representation Learning,
-  \url{https://arxiv.org/abs/2102.11107}{\uline{arXiv:2102.11107}}
-  {[}cs.LG{]},
-  \url{https://doi.org/10.48550/arXiv.2102.11107}}
+yet to deliver \citep{Scholkopf-representation21}.
 
 An apocryphal story in AI tells of efforts by US researchers during the
 1980s to train a computer system that could distinguish between images
@@ -45,19 +40,10 @@ sciences, AI systems trained to detect collapsed lungs from medical
 images have been proven inaccurate, after the model was found to have
 learned to detect the tube inserted into the lung to enable a patient to
 breath as a response to its collapse, rather than the physical features
-of the lung itself.\footnote{Rueckel, J., Trappmann, L., Schachtner, B.,
-  Wesp, P., Hoppe, B.F., Fink, N., Ricke, J., Dinkel, J., Ingrisch, M.,
-  and Sabel, B.O. (2020) Impact of Confounding Thoracic Tubes and
-  Pleural Dehiscence Extent on Artificial Intelligence Pneumothorax
-  Detection in Chest Radiographs. Invest Radiol. 2020
-  Dec;55(12):792-798. doi: 10.1097/RLI.0000000000000707. PMID: 32694453.
-  \url{https://pubmed.ncbi.nlm.nih.gov/32694453/}}
+of the lung itself \citep{Rueckel-impact20}.
 In medical sciences, deployment of such systems could put patient care
 at risk. In social sciences, these AI design and data bias failures can
-combine to marginalise vulnerable populations.\footnote{Emspak, J.
-  (2016) How a machine learns prejudice, Scientific American Blogs,
-  available at:
-  \url{https://www.scientificamerican.com/article/how-a-machine-learns-prejudice/}}
+combine to marginalise vulnerable populations \citep{Emspak-prejudice16}.
 
 Conversely, an understanding of the structures within data can improve
 the accuracy of machine learning analyses. In exoplanet discovery, for
@@ -73,9 +59,7 @@ instrumentation effects were distorting the data, and developed a method
 to model those effects and remove them from exoplanet predictions. The
 result was an efficient method for exoplanet identification that
 subsequently contributed to the discovery of the first potentially
-habitable planet.\footnote{Schölkopf, B. (2019) Causality for machine
-  learning, arXiv:1911.10500 {[}cs.LG{]},
-  \url{https://doi.org/10.1145/3501714.3501755}}
+habitable planet \citep{Scholkopf-causality22}.
 
 \subsection{Causal models as a route to advancing the science of AI and
 AI for
@@ -91,9 +75,7 @@ manage this violation, distinguishing between patterns in data that
 simply co-occur and patterns that are causal. The resulting AI systems
 would be able to solve a task in many different environments, based on
 an understanding of the fundamental causal mechanisms in a
-system.\footnote{Peters, J., Janzing, D. and Schölkopf, B. (2017)
-  Elements of causal inference: foundations and learning algorithms, MIT
-  Press, Cambridge, MA, ISBN 9780262037310} They would be more robust in
+system \citep{Peters-elements17}. They would be more robust in
 deployment, being less likely to make incorrect predictions as the
 environment in which they operate changes, and could be more efficient
 to train and deploy. They would also represent a step towards
