@@ -94,14 +94,11 @@ processes that drive the behaviour of a system; unlock progress towards
 AI systems that `think' in the sense of acting in an imagined space;
 while also leveraging insights that can be learned from data, but not
 otherwise detected.\footnote{For reference, see the table on page 11 of
-  reference 69.} They also offer opportunities to explore
+  reference \citep{Scholkopf-causality22}.} They also offer opportunities to explore
 counterfactuals in complex systems, asking what the impact of different
 interventions could have been, opening a door to the development of
 simulation-based decision-making tools.\footnote{Such tools may have
-  particular relevance in policy. For example: Mastakouri, A.A. and
-  Schölkopf, B. (2020) Causal analysis of Covid-19 spread in Germany,
-  arXiv:2007.11896 {[}stat.AP{]},
-  \url{https://doi.org/10.48550/arXiv.2007.11896}}
+  particular relevance in policy. For example: \citep{Mastakouri-causal20}.}
 
 Achieving this potential requires technical developments in a number of
 directions, but can also yield more effective AI systems. Such systems
@@ -196,9 +193,7 @@ learning strategies include:
   performance degradation on out-of-distribution data.
 \item
   Causal representation learning, defining variables that are related by
-  causal models.\footnote{Schölkopf, B. (2019) Causality for machine
-    learning, arXiv:1911.10500 {[}cs.LG{]},
-    \url{https://doi.org/10.1145/3501714.3501755}}
+  causal models \citep{Scholkopf-causality22}.
 \item
   Reinforcement learning strategies that reward agents for identifying
   policies based on invariances over different conditions.
@@ -206,41 +201,26 @@ learning strategies include:
 
 Across these new learning approaches, attempts to establish causal
 mechanisms are also prompting progress in machine learning theory,
-through statistical formulations of core principles.\footnote{Guo, S.,
-  Tóth, V., Schölkopf, B. and Huszár, F. (2022) Causal de Finetti: On
-  the Identification of Invariant Causal Structure in Exchangeable Data,
-  arXiv:2203.15756 {[}stat.ML{]},
-  \url{https://doi.org/10.48550/arXiv.2203.15756}}
+through statistical formulations of core principles \citep{Guo-causal22}.
 
 Combining different methods can also enhance the functionality of an AI
 system. For example:
 
 \begin{itemize}
 \item
-  Neural ODEs has been shown to identify causal structures in time
-  series data.\footnote{Aliee, H., Theis, F. J. and Kilbertus, N. (2021)
-    Beyond Predictions in Neural ODEs: Identification and Interventions,
-    arXiv:2106.12430 {[}cs.LG{]},
-    \url{https://doi.org/10.48550/arXiv.2106.12430}}
+  Neural ODEs have been shown to identify causal structures in time
+  series data \citep{Aliee-beyond21}.
 \item
   Describing causal effects as objective functions in constrained
   optimisation problems can deliver a form of stochastic causal
-  programming.\footnote{Padh, K., Zeitler, J., Watson, D., Kusner, M.,
-    Silva, R., and Kilbertus, N. (2022) Stochastic Causal Programming
-    for Bounding Treatment Effects, arXiv:2202.10806 {[}stat.ML{]},
-    \url{https://doi.org/10.48550/arXiv.2202.10806}}
+  programming \citep{Padh-stochastic22}.
 \item
-  Technical interventions\footnote{\url{https://arxiv.org/abs/2005.03353}{Jakobsen,}
-    M. E., and Peters, J. (2020) Distributional robustness of K-class
-    estimators and the PULSE, arXiv:2005.03353 {[}econ.EM{]},
-    \url{https://doi.org/10.48550/arXiv.2005.03353}}
+  Technical interventions \citep{Jakobsen-distributional22}
   can constrain or optimise a model towards causal outcomes. As with
   simulation design, diagnostic checks can also help identify
   cause-effect relationships by examining model outputs against `reality
   criteria',\footnote{Including syntactic, semantic, and pragmatic
-    elements: Stadler, M. \& Kruse, P. (1990) Über Wirklichkeitskrite-
-    rien. In: Riegas, V. \& Vetter, C. (eds.) Zur Biologie der
-    Kognition. Frankfurt a. M.: Suhrkamp} which compare outputs to
+    elements: \citep{Stadler-wirklichkeitskriterien90}.} which compare outputs to
   real-world results.
 \end{itemize}
 
