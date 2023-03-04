@@ -2,7 +2,7 @@
 
 @article{Ritel-dilemmas73,
   title =	 {Dilemmas in a general theory of planning},
-  author =	 {Rittel, Horst WJ and Webber, Melvin M},
+  author =	 {Rittel, Horst W. J. and Webber, Melvin M.},
   journal =	 {Policy sciences},
   volume =	 4,
   number =	 2,
@@ -191,10 +191,10 @@
 %Hernandez-Triana, L. and Bell, S. (2022) Taking the sting out of vector borne diseases, APHA Science Blog, available at: https://aphascience.blog.gov.uk/2022/07/06/vector-borne-diseases/
 
 @Misc{Hernandez-taking22,
-  author =	 {Hernandez-Triana, L. and Bell, S.},
+  author =	 {Hernandez-Triana, Luis and Bell, Ssuzanna},
   title =	 {Taking the sting out of vector borne diseases},
   howpublished = {APHA Science Blog, available at:
-                  https://aphascience.blog.gov.uk/2022/07/06/vector-borne-diseases/},
+                  \url{https://aphascience.blog.gov.uk/2022/07/06/vector-borne-diseases/}},
   year =	 2022
 }
 
@@ -489,12 +489,45 @@
 
 %Hermans, J., Delaunoy, A., Rozet, F., Wehenkel, A. and Louppe, G. (2021), Averting A Crisis In Simulation-Based Inference, arXiv:2110.06581 [stat.ML], https://doi.org/10.48550/arXiv.2110.06581 
 
+@TechReport{Hermans-averting21,
+  title={A Trust Crisis In Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful},
+  author={Hermans, Joeri and Delaunoy, Arnaud and Rozet, Fran{\c{c}}ois and Wehenkel, Antoine and Louppe, Gilles},
+  arxiv={2110.06581},
+  url={https://arxiv.org/abs/2110.06581},
+  year={2021},
+  code={https://github.com/montefiore-ai/trust-crisis-in-simulation-based-inference}
+}
 %Ibid. 
 
 %Alsing, J., Charnock, T., Feeney, S. and Wandelt, B. (2019) Fast likelihood-free cosmology with neural density estimators and active learning, arXiv:1903.00007 [astro-ph.CO], https://doi.org/10.48550/arXiv.1903.00007 
 
+
+
+@article{10.1093/mnras/stz1960,
+    author = {Alsing, Justin and Charnock, Tom and Feeney, Stephen and Wandelt, Benjamin},
+    title = {Fast likelihood-free cosmology with neural density estimators and active learning},
+    journal = {Monthly Notices of the Royal Astronomical Society},
+    volume = {488},
+    number = {3},
+    pages = {4440-4458},
+    year = {2019},
+    month = {07},
+    abstract = "{Likelihood-free inference provides a framework for performing rigorous Bayesian inference using only forward simulations, properly accounting for all physical and observational effects that can be successfully included in the simulations. The key challenge for likelihood-free applications in cosmology, where simulation is typically expensive, is developing methods that can achieve high-fidelity posterior inference with as few simulations as possible. Density-estimation likelihood-free inference (DELFI) methods turn inference into a density-estimation task on a set of simulated data-parameter pairs, and give orders of magnitude improvements over traditional Approximate Bayesian Computation approaches to likelihood-free inference. In this paper, we use neural density estimators (NDEs) to learn the likelihood function from a set of simulated data sets, with active learning to adaptively acquire simulations in the most relevant regions of parameter space on the fly. We demonstrate the approach on a number of cosmological case studies, showing that for typical problems high-fidelity posterior inference can be achieved with just $\mathcal O(10^3)$ simulations or fewer. In addition to enabling efficient simulation-based inference, for simple problems where the form of the likelihood is known, DELFI offers a fast alternative to Markov Chain Monte Carlo (MCMC) sampling, giving orders of magnitude speed-up in some cases. Finally, we introduce pydelfi – a flexible public implementation of DELFI with NDEs and active learning – available at https://github.com/justinalsing/pydelfi.}",
+    issn = {0035-8711},
+    doi = {10.1093/mnras/stz1960},
+    url = {https://doi.org/10.1093/mnras/stz1960},
+    eprint = {https://academic.oup.com/mnras/article-pdf/488/3/4440/29113037/stz1960.pdf},
+}
+
 %See above, and Lavin, A., Zenil, H., Paige, B., Krakauer, D., Gottschlich, J., Mattson, T., Anandkumer, A., Choudry, S., Rocki, K., Baydin, A.G., Prunkl, C., Paige, B., Isayev, O., Peterson, E., McMahon, P.L., Macke, J., Cranmer, K., Zhang, J., Wainwright, H., Hanuka, A., Veloso, M., Assefra, S., Zheng, S., and Pfeffer, A. (2021)  Simulation Intelligence: Towards a New Generation of Scientific Methods, arXiv:2112.03235 [cs.AI],  https://doi.org/10.48550/arXiv.2112.03235 
 
+@TechReport{Lavin-simulation21,
+  title={Simulation intelligence: Towards a new generation of scientific methods},
+  author={Lavin, Alexander and Zenil, Hector and Paige, Brooks and Krakauer, David and Gottschlich, Justin and Mattson, Tim and Anandkumar, Anima and Choudry, Sanjay and Rocki, Kamil and Baydin, At{\i}l{\i}m G{\"u}ne{\c{s}} and others},
+  arxiv={2112.03235},
+  url={https://arxiv.org/abs/2112.03235},
+  year={2021}
+}
 %See, for example, Cranmer, K., Heinrich, L., Head, T. and Louppe, G. Active sciencing, at:  https://github.com/cranmer/active_sciencing
 
 %Boelts, J., Lueckmann, J.M., Gao, R., and Macke, J.H. (2022) Flexible and efficient simulation-based inference for models of decision-making eLife 11:e77220 https://doi.org/10.7554/eLife.77220 
