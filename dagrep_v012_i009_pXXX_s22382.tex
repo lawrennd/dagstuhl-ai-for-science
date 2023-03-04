@@ -3,9 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage[numbers]{natbib}
+\usepackage[backref=true]{biblatex}
 \usepackage{hyperref}
 \bibliographystyle{unsrtnat}
 
+\addbibresource{ai-for-science.bib}
 \iffalse
 \usepackage{draftwatermark} % option '[nostamp]' to ignore watermark
 \SetWatermarkFontSize{5cm}
@@ -83,6 +85,6 @@
 \include{participants}
 \include{research-questions}
 
-\bibliography{ai-for-science}
+\printbibliography
 
 \end{document}
