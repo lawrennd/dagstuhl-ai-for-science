@@ -5,10 +5,7 @@
 Humans have a long history of imagining futures where human progress is
 accelerated by intelligent machines. Embedded in these visions for the
 future are aspirations that AI can be a faithful servant, easing daily
-activities or enhancing human activities.\footnote{The Royal Society
-  (2018) AI narratives: portrayals and perceptions of artificial
-  intelligence and why they matter, available at:
-  \url{https://royalsociety.org/topics-policy/projects/ai-narratives/}}
+activities or enhancing human activities \citep{Royal-narratives18}.
 As with many emerging technologies, the reality of AI today looks
 different to these Sci-Fi futures.\footnote{The title of this section is
   inspired by:
@@ -16,10 +13,7 @@ different to these Sci-Fi futures.\footnote{The title of this section is
 Practical experiences of deploying AI highlights a range of potential
 failure modes, often rooted in insufficient contextual awareness,
 misspecification of user needs, or misunderstanding of environmental
-dynamics.\footnote{Paleyes, A., Urma, R.G. and Lawrence, N.D. (2022)
-  Challenges in Deploying Machine Learning: A Survey of Case Studies,
-  ACM Computing Surveys,
-  \url{https://doi.org/10.1145/3533378}}
+dynamics \citep{Paleyes-challenges22}.
 
 Today's science builds on thousands of years of attempts to understand
 the world, which can be leveraged to design AI that serves scientific
@@ -42,21 +36,10 @@ of physics, for example, describe how energy moves through a system,
 based on conservation principles. These laws are complemented by
 mathematical symmetries that arise from our abstract representations of
 physical objects and describe what features of an object remain
-consistent, despite changes or transformations in a system.\footnote{Villar,
-  S., Hogg, D.W., Storey-Fisher, K., Yao, W. and Blum-Smith, B. (2021)
-  Scalars are universal: Equivariant machine learning, structured like
-  classical physics, arXiv:2106.06610 {[}cs.LG{]},
-  \url{https://doi.org/10.48550/arXiv.2106.06610}
-  and Villar, S., Yao, W., Hogg, D.W., Blum-Smith, B. and Dumitrascu, B.
-  (2022) Dimensionless machine learning: Imposing exact units
-  equivariance, arXiv:2204.00887 {[}stat.ML{]},
-  \url{https://doi.org/10.48550/arXiv.2204.00887}}
+consistent, despite changes or transformations in a system \citep{Villar-scalars21}.
 There may also be known invariances in a system: factors that do not
 change under any perturbations or that change in a defined
-way.\footnote{Ling, J., Jones, R. E., and Templeton, J.A. (2016) Machine
-  learning strategies for systems with invariance properties. United
-  States.
-  \url{https://doi.org/10.1016/j.jcp.2016.05.003}}
+way \citep{Ling-machine16}.
 Building on this existing knowledge, and connecting to efforts to
 generate causal understandings of the world through machine learning, an
 area of growing interest has been the design of machine learning models
@@ -73,13 +56,14 @@ leveraging insights from data (Figure 1).
 \includegraphics[width=0.8\textwidth]{media/figure-1.pdf}
 \end{center}
 \caption{Models along a spectrum from classical i.i.d models to strongly mechanistic differential equation models introduce aspects of causality and symmetries to create a continuum between mechanistic and data-driven worlds. Statistical or data-driven models are weakly mechanistic (i.e. they include smoothness assumptions or similar).}
+\label{model-spectrum}
 \end{figure}
 
 At one end of that continuum, mechanistic models would obey known laws
 or principles in a strongly deterministic way; at the other, statistical
 models encode fewer assumptions and rely more on data. The addition of
 invariances and symmetries, alongside other forms of domain knowledge,
-allows bridging between these two model classes (Figure 2). Models that
+allows bridging between these two model classes (Figure \ref{model-spectrum}). Models that
 describe how much heat is absorbed by the oceans under conditions of
 climate change, for example, should obey the laws of thermodynamics and
 energy conservation. By encoding the domain knowledge that has yielded
@@ -120,10 +104,7 @@ targets. Instead of relying on physical testing of such starting
 molecules, multiple rounds of virtual testing can rapidly simulate the
 processes of drug design, manufacture, testing, and analysis to assess
 which starting molecules are more (or less) likely to be viable
-candidate drugs.\footnote{Klami, A., Damoulas, T., Engkvist, O., Rinke,
-  P., Kaski, S. (2022): Virtual Laboratories: Transforming research with
-  AI. TechRxiv. Preprint.
-  \url{https://doi.org/10.36227/techrxiv.20412540.v1}}
+candidate drugs \citep{Klami-virtual22}.
 As a result, AI can help accelerate the research process.
 
 Advances in machine learning methods to enable effective simulations,
@@ -148,11 +129,7 @@ system, these AI sidekicks will need insights from cognitive science,
 studies of team decision-making, and new learning strategies based on
 limited examples. The sophisticated user modelling so-created would
 unlock new forms of human-AI collaboration; scientific centaurs that
-combine both human and machine intelligence.\footnote{Celikok, M.M.,
-  Oliehoek, F.A., Kaski, S. (2022) Best-Response Bayesian Reinforcement
-  Learning with Bayes-Adaptive POMDPs for Centaurs,
-  \url{https://arxiv.org/abs/2204.01160}\textbf{~}{[}cs.AI{]},
-  \url{https://doi.org/10.48550/arXiv.2204.01160}}
+combine both human and machine intelligence \citep{Celikok-best22}.
 
 \subsection{Enabling communication across
 domains}\label{enabling-communication-across-domains}
@@ -198,16 +175,13 @@ specific drugs more rigorously. In astronomical studies, researchers are
 often working with high-dimensional datasets with many confounding
 correlations. For example, gravitational waves are ripples in space-time
 catalysed by the movement of massive bodies in space, such as planets or
-stars.\footnote{NASA, What is a gravitational wave? Available at:
-  \url{https://spaceplace.nasa.gov/gravitational-waves/en/}}
+stars \citep{NASA-gravitational}.
 These invisible phenomena are studied at observatories across the
 world,\footnote{See, for example, the LIGO project. Information
   available at:
   \url{https://www.ligo.caltech.edu}}
 based on models to describe wave signals and the `noise' generated by
-instruments that measure them.\footnote{Dax, M., Green, S.R., Gair, J.,
-  Macke, J.H., Buonanno, A. and Schölkopf, B. (2021) Phys. Rev. Lett.
-  127, 241103, https://link.aps.org/doi/10.1103/PhysRevLett.127.241103}
+instruments that measure them \citep{Dax-gravitational21}.
 Measurements of gravitational waves can be used to infer the properties
 of black holes that create them, such as their location, mass, and spin,
 using simulation-based inference to characterise the source of a wave,
@@ -217,12 +191,9 @@ structure that sits underneath it: for example, gravitational wave
 detectors are located across the globe, and their location affects the
 angle at which they detect waves hitting the Earth. This structure can
 be exploited through data sampling strategies to help make machine
-learning more efficient.\footnote{Ibid.} An alternative, however, is to
+learning more efficient \citep{Dax-gravitational21}. An alternative, however, is to
 use deterministic models that already reflect relevant physical
-laws.\footnote{Bodin, E., Dai, Z., Campbell, N.D.F. and Ek, C.H. (2020),
-  Black-box density function estimation using recursive partitioning,
-  arXiv:2010.13632 {[}stat.ML{]},
-  https://doi.org/10.48550/arXiv.2010.13632} Across these approaches,
+laws \citep{Bodin-black21}. Across these approaches,
 software packages play an important role in enabling communication and
 dissemination of methods for wider use.\footnote{See, for example:
   \url{https://lscsoft.docs.ligo.org/bilby/}}
@@ -231,10 +202,7 @@ dissemination of methods for wider use.\footnote{See, for example:
 
 New modelling approaches and mathematical innovations offer exciting
 opportunities to integrate domain knowledge, symmetries and invariances
-into AI systems.\footnote{Villar, S., Yao, W., Hogg, D.W., Blum-Smith,
-  B. and Dumitrascu, B. (2022) Dimensionless machine learning: Imposing
-  exact units equivariance, arXiv:2204.00887 {[}stat.ML{]},
-  \url{https://doi.org/10.48550/arXiv.2204.00887}}
+into AI systems \citep{Villar-dimensionless22}.
 Integration can be achieved in different ways:
 
 \begin{itemize}
@@ -249,32 +217,12 @@ Integration can be achieved in different ways:
 \item
   Latent force models allow representations of known symmetries
   alongside probabilistic factors, enabling integration of mechanistic
-  models with unknown forces.\footnote{Ward, W.O.C., Ryder, T., Prangle,
-    D. and Álvarez, M.A. (2019) Black-Box Inference for Non-Linear
-    Latent Force Models,
-    \url{https://arxiv.org/abs/1906.09199}
-    {[}stat.ML{]},
-    \url{https://doi.org/10.48550/arXiv.1906.09199}}
+  models with unknown forces \citep{Ward-blackbox20}.
 \item
   Architectural features can restrict model focus to outputs that
   satisfy symmetries, for example using weight sharing, irreducible
   representations, or invoking symmetries as constraints.\footnote{See,
-    for example: Kondor, R. and Trivedi, S. (2018), On the
-    Generalization of Equivariance and Convolution in Neural Networks to
-    the Action of Compact Groups,
-    \url{https://arxiv.org/abs/1802.03690}
-    {[}stat.ML{]},
-    \url{https://doi.org/10.48550/arXiv.1802.03690};
-    Maron, H., Ben-Hamu, H., and Shamir, N. and Lipman, Y. (2019)
-    Invariant and Equivariant Graph Networks,
-    \url{https://arxiv.org/abs/1812.09902}
-    \textbf{{[}cs.LG{]},}
-    \url{https://doi.org/10.48550/arXiv.1812.09902};
-    Dym, N. and Maron, H. (2020) On the Universality of Rotation
-    Equivariant Point Cloud Networks,
-    \url{https://arxiv.org/abs/2010.02449}
-    {[}cs.LG{]},
-    \url{https://doi.org/10.48550/arXiv.2010.02449}}
+    for example: \citep{Kondor-generalization18,Maron-invariant18,Dym-universality20}}
 \item
   Loss functions can be deployed to penalise predictions that fail to
   satisfy physical constraints or symmetries.
@@ -296,24 +244,10 @@ unclear, uncertain, or changeable. To tackle this challenge:
   agents solve tasks when there is little or nothing known about the
   reward function, and no previous behaviour to learn from.
 \item
-  Interactive knowledge elicitation,\footnote{Sundin, I., Peltola, T.,
-    Micallef, L., Afrabandpey, H., Soare, M., Majumder, M.M., Daee, P.,
-    He, C., Serim, B., Havulinna, A., Heckman, C., Jacucci, G.,
-    Marttinen, P., Kaski, S. (2018) Improving genomics-based predictions
-    for precision medicine through active elicitation of expert
-    knowledge, \emph{Bioinformatics}, Volume 34, Issue 13, 01 July 2018,
-    Pages i395--i403,
-    \url{https://doi.org/10.1093/bioinformatics/bty257}}
+  Interactive knowledge elicitation \citep{Sundin-improving18},
   combining prior knowledge from cognitive science with learning from
-  data,\footnote{Kangasrääsiö, A., Jokinen, J.P.P., Oulasvirta, A.,
-    Howes, A. and Kaski, S. (2019), Parameter Inference for
-    Computational Cognitive Models with Approximate Bayesian
-    Computation. Cogn Sci, 43:
-    e12738.~\url{https://doi.org/10.1111/cogs.12738}}
-  and generative user models\footnote{De Peuter, S., Oulasvirta, A. and
-    Kaski, S. (2021) Toward AI Assistants That Let Designers Design,
-    arXiv:2107.13074 {[}cs.HC{]},
-    \url{https://doi.org/10.48550/arXiv.2107.13074}}
+  data \citep{Kangasraasio-parameter19},
+  and generative user models \citep{DePeuter-toward21}
   can support more effective interactions between user and machine.
 \end{itemize}
 
