@@ -3,9 +3,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage[left=3.4cm,right=3.4cm,bottom=3.5cm,top=3.4cm] {geometry}
-\usepackage[backref=true,style=numeric,sorting=none]{biblatex}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrt}
+
 \newcommand{\footremember}[2]{%
     \footnote{#2}
     \newcounter{#1}
@@ -21,8 +23,8 @@
 \newcommand{\jointwork}[1]{Joint work with \emph{#1}.}
 \newcommand{\abstractref}[1]{}
 \newcommand{\abstractrefurl}[1]{}
-\addbibresource{ai-for-science.bib}
 
+\renewcommand{\cite}[1]{\citep{#1}}
 \title{AI for Science: An Emerging Agenda}
 
 \author{%
@@ -58,7 +60,7 @@ Schmidt Futures for its continuing support, and the donation that
 enables its work.
 
 
-\printbibliography
+\bibliography{ai-for-science}
 
 \appendix
 \include{participants}
