@@ -8,6 +8,9 @@
    viewBox="0 0 507.67959 443.94253"
    sodipodi:docname="figure-2.svg"
    inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   inkscape:export-filename="figure-2.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +71,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.89797953"
-     inkscape:cx="78.509585"
+     inkscape:cx="22.829028"
      inkscape:cy="432.08112"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -246,7 +249,7 @@
          sodipodi:role="line"
          id="tspan1595">domain insights</tspan></text><text
        transform="matrix(1,0,0,-1,126.6676,454.3846)"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Helvetica Neue';-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#1d1d1b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Helvetica Neue';-inkscape-font-specification:HelveticaNeue;writing-mode:lr-tb;fill:#1c55e9;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="text1603"><tspan
          x="0 2.5899999 8.1499996 13.52 15.74 21.299999 27.23 32.599998 35.380001 37.599998 43.16 46.119999 51.860001 55.189999 63.720001 69.089996 72.239998 74.459999 80.199997 85.760002"
          y="0"
