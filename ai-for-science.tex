@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage[left=3.4cm,right=3.4cm,bottom=3.5cm,top=3.4cm] {geometry}
-\usepackage[numbers]{natbib}
 \usepackage[backref=true,style=numeric,sorting=none]{biblatex}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -16,9 +15,12 @@
     \footnotemark[\value{#1}]%
 } 
 
-\newcommand{\abstracttitle}[1]{\subsubsection{#1}}}
+\newcommand{\abstracttitle}[1]{\subsubsection{#1}}
 \newcommand{\abstractauthor}[2][None]{\noindent\emph{#1}\vspace{0.25cm}}
-
+\newcommand{\license}{}
+\newcommand{\jointwork}[1]{Joint work with \emph{#1}.}
+\newcommand{\abstractref}[1]{}
+\newcommand{\abstractrefurl}[1]{}
 \addbibresource{ai-for-science.bib}
 
 \title{AI for Science: An Emerging Agenda}
