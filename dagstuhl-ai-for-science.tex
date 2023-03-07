@@ -1,0 +1,66 @@
+\documentclass[a4paper,UKenglish]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[left=3.4cm,right=3.4cm,bottom=3.5cm,top=3.4cm] {geometry}
+\usepackage[numbers]{natbib}
+\usepackage[backref=true,style=numeric,sorting=none]{biblatex}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\newcommand{\footremember}[2]{%
+    \footnote{#2}
+    \newcounter{#1}
+    \setcounter{#1}{\value{footnote}}%
+}
+\newcommand{\footrecall}[1]{%
+    \footnotemark[\value{#1}]%
+} 
+
+\newcommand{\abstracttitle}[1]{\subsubsection{#1}}}
+\newcommand{\abstractauthor}[2][None]{\noindent\emph{#1}\vspace{0.25cm}}
+
+\addbibresource{ai-for-science.bib}
+
+\title{Machine Learning for Science: Bridging Data-Driven and Mechanistic Modelling}
+
+\author{%
+  Philipp Berens\footremember{tuebingen}{Universität Tübingen, DE}%
+  \and Kyle Cranmer\footremember{wisconsin}{University of Wisconsin - Madison, USA}%
+  \and Neil D. Lawrence\footremember{cambridge}{University of Cambridge, UK}
+  \and Ulrike von Luxburg\footrecall{tuebingen}
+  \and Jessica Montgomery\footrecall{cambridge}
+  }
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+
+\include{summary}
+
+\include{introduction-bridging-data-driven-and-mechanistic-modelling}
+\include{snapshots-of-ai-in-science}
+\include{building-effective-simulations}
+\include{connecting-data-to-causality}
+\include{encoding-domain-knowledge}
+\include{a-research-agenda-in-ai-for-science}
+\include{accelerating-progress-in-ai-for-science}
+
+\subsection*{Acknowledgments}
+
+The Accelerate Programme for Scientific Discovery would like to thank
+Schmidt Futures for its continuing support, and the donation that
+enables its work.
+
+
+\printbibliography
+
+\appendix
+\include{participants}
+\include{research-questions}
+
+
+\end{document}
